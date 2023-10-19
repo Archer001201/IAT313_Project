@@ -9,13 +9,15 @@ namespace Player
         private InputControls _inputControls;
 
         public bool canTalk;
-        public GameObject interoperableSign;
+        public GameObject interactableSign;
         
         private void Awake()
         {
             _inputControls = new InputControls();
+            _inputControls.GamePlay.ConfirmButton.performed += OpenDialogueCanvas;
+            _inputControls.GamePlay.NavigationDown.performed += _ => EventHandler.NavigationDown();
+            _inputControls.GamePlay.NavigationUp.performed += _ => EventHandler.NavigationUp();
 
-            _inputControls.GamePlay.PlayerInteract.performed += OpenDialogueCanvas;
         }
 
         private void OnEnable()
@@ -30,7 +32,7 @@ namespace Player
 
         private void Update()
         {
-            interoperableSign.SetActive(canTalk);
+            interactableSign.SetActive(canTalk);
         }
 
         private void OnTriggerEnter2D(Collider2D other)

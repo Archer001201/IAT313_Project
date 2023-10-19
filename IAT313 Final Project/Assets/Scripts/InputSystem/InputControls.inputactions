@@ -15,9 +15,27 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "PlayerInteract",
+                    "name": "ConfirmButton",
                     "type": "Button",
                     "id": "7e6532ce-c7f5-4aee-aaab-a4efb6fa2512",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "NavigationUp",
+                    "type": "Button",
+                    "id": "6a0dd8bf-0eec-49fc-8991-57e3a83042ce",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "NavigationDown",
+                    "type": "Button",
+                    "id": "076ba7f4-2b1f-42af-95c3-70e6d064bec5",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -197,7 +215,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "PlayerInteract",
+                    "action": "ConfirmButton",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -208,7 +226,95 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "PlayerInteract",
+                    "action": "ConfirmButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "de53f7f5-e11d-4d66-b0af-35e45818ef68",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NavigationUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c4f67c22-fd94-42ca-8662-77ca9ffa841f",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NavigationUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "962f9db9-a5dd-4f7e-a187-a1e7ee931e24",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NavigationUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "65896316-e345-40b5-8315-8f744327e479",
+                    "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NavigationUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e2db9c41-234c-42f0-8a7c-001815384ea6",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NavigationDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "da4ec9fd-87a2-4d1f-9d79-bdaedb1b7186",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NavigationDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a89c5a0a-89eb-4864-9811-6f73071f6869",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NavigationDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "23d9533d-4490-4e78-bf06-acf613ca2ead",
+                    "path": "<Gamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NavigationDown",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

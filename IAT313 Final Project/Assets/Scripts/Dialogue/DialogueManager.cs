@@ -12,8 +12,10 @@ namespace Dialogue
         public bool canTalk;
         
         private Stack<DialoguePiece> _dialogueStack;
+        private DialogueOption[] _dialogueOptions;
         private bool _isTalking;
         [SerializeField] private string currentDialogueEventID;
+        private int _currentOptionIndex;
 
         private void Awake()
         {
@@ -28,11 +30,29 @@ namespace Dialogue
             {
                 if (!_isTalking && _dialogueStack!=null) StartCoroutine(DialogueRoutine());
             };
+
+            EventHandler.OnNavigationUp += () =>
+            {
+                if (_currentOptionIndex > 0) _currentOptionIndex--;
+            };
+            EventHandler.OnNavigationDown += () =>
+            {
+                if (_currentOptionIndex < _dialogueOptions.Length-1) _currentOptionIndex++;
+            };
         }
 
         private void Update()
         {
             if (_dialogueStack != null) canTalk = true;
+            if (_dialogueOptions.Length > 0)
+            {
+                for (int i = 0; i < _dialogueOptions.Length; i++)
+                {
+                    DialogueOption option = _dialogueOptions[i];
+                    option.isSelected = i == _currentOptionIndex;
+                    EventHandler.ShowSelectedOption(option);
+                }
+            }
         }
 
         private void LoadJson(string fileName)
@@ -55,6 +75,8 @@ namespace Dialogue
             foreach (var dialogueEvent in dialogueEventSet.dialogueEvents.Where(dialogueEvent => dialogueEvent.dialogueEventID.Equals(currentDialogueEventID)))
             {
                 currentDialogueEvent = dialogueEvent.dialogues;
+                _dialogueOptions = dialogueEvent.options;
+                _currentOptionIndex = 0;
             }
             if (currentDialogueEvent == null) return;
             _dialogueStack = new Stack<DialoguePiece>();
@@ -76,9 +98,24 @@ namespace Dialogue
             }
             else
             {
-                FillDialogueStack();
-                _isTalking = false;
-                EventHandler.CloseDialoguePanel();
+                if (_dialogueOptions != null)
+                {
+                    ShowDialogueOptions(_dialogueOptions);
+                    FillDialogueStack();
+                }
+                else
+                {
+                    _isTalking = false;
+                    EventHandler.CloseDialoguePanel();
+                }
+            }
+        }
+
+        private void ShowDialogueOptions(DialogueOption[] options)
+        {
+            foreach (var option in options)
+            {
+                EventHandler.ShowDialogueOption(option);
             }
         }
     }

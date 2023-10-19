@@ -393,6 +393,7 @@ MonoBehaviour:
   figure: {fileID: 8992690272184376418}
   dialogue: {fileID: 8992690271283915664}
   continueBox: {fileID: 814853969}
+  optionBox: {fileID: 353424362}
 --- !u!1 &8992690271283915678
 GameObject:
   m_ObjectHideFlags: 0

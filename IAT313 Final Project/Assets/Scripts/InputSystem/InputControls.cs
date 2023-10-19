@@ -37,9 +37,27 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""PlayerInteract"",
+                    ""name"": ""ConfirmButton"",
                     ""type"": ""Button"",
                     ""id"": ""7e6532ce-c7f5-4aee-aaab-a4efb6fa2512"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""NavigationUp"",
+                    ""type"": ""Button"",
+                    ""id"": ""6a0dd8bf-0eec-49fc-8991-57e3a83042ce"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""NavigationDown"",
+                    ""type"": ""Button"",
+                    ""id"": ""076ba7f4-2b1f-42af-95c3-70e6d064bec5"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -219,7 +237,7 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""PlayerInteract"",
+                    ""action"": ""ConfirmButton"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -230,7 +248,95 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""PlayerInteract"",
+                    ""action"": ""ConfirmButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""de53f7f5-e11d-4d66-b0af-35e45818ef68"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NavigationUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c4f67c22-fd94-42ca-8662-77ca9ffa841f"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NavigationUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""962f9db9-a5dd-4f7e-a187-a1e7ee931e24"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NavigationUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""65896316-e345-40b5-8315-8f744327e479"",
+                    ""path"": ""<Gamepad>/leftStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NavigationUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e2db9c41-234c-42f0-8a7c-001815384ea6"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NavigationDown"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""da4ec9fd-87a2-4d1f-9d79-bdaedb1b7186"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NavigationDown"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a89c5a0a-89eb-4864-9811-6f73071f6869"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NavigationDown"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""23d9533d-4490-4e78-bf06-acf613ca2ead"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NavigationDown"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -242,7 +348,9 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
         // GamePlay
         m_GamePlay = asset.FindActionMap("GamePlay", throwIfNotFound: true);
         m_GamePlay_PlayerMove = m_GamePlay.FindAction("PlayerMove", throwIfNotFound: true);
-        m_GamePlay_PlayerInteract = m_GamePlay.FindAction("PlayerInteract", throwIfNotFound: true);
+        m_GamePlay_ConfirmButton = m_GamePlay.FindAction("ConfirmButton", throwIfNotFound: true);
+        m_GamePlay_NavigationUp = m_GamePlay.FindAction("NavigationUp", throwIfNotFound: true);
+        m_GamePlay_NavigationDown = m_GamePlay.FindAction("NavigationDown", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -305,13 +413,17 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_GamePlay;
     private List<IGamePlayActions> m_GamePlayActionsCallbackInterfaces = new List<IGamePlayActions>();
     private readonly InputAction m_GamePlay_PlayerMove;
-    private readonly InputAction m_GamePlay_PlayerInteract;
+    private readonly InputAction m_GamePlay_ConfirmButton;
+    private readonly InputAction m_GamePlay_NavigationUp;
+    private readonly InputAction m_GamePlay_NavigationDown;
     public struct GamePlayActions
     {
         private @InputControls m_Wrapper;
         public GamePlayActions(@InputControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @PlayerMove => m_Wrapper.m_GamePlay_PlayerMove;
-        public InputAction @PlayerInteract => m_Wrapper.m_GamePlay_PlayerInteract;
+        public InputAction @ConfirmButton => m_Wrapper.m_GamePlay_ConfirmButton;
+        public InputAction @NavigationUp => m_Wrapper.m_GamePlay_NavigationUp;
+        public InputAction @NavigationDown => m_Wrapper.m_GamePlay_NavigationDown;
         public InputActionMap Get() { return m_Wrapper.m_GamePlay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -324,9 +436,15 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
             @PlayerMove.started += instance.OnPlayerMove;
             @PlayerMove.performed += instance.OnPlayerMove;
             @PlayerMove.canceled += instance.OnPlayerMove;
-            @PlayerInteract.started += instance.OnPlayerInteract;
-            @PlayerInteract.performed += instance.OnPlayerInteract;
-            @PlayerInteract.canceled += instance.OnPlayerInteract;
+            @ConfirmButton.started += instance.OnConfirmButton;
+            @ConfirmButton.performed += instance.OnConfirmButton;
+            @ConfirmButton.canceled += instance.OnConfirmButton;
+            @NavigationUp.started += instance.OnNavigationUp;
+            @NavigationUp.performed += instance.OnNavigationUp;
+            @NavigationUp.canceled += instance.OnNavigationUp;
+            @NavigationDown.started += instance.OnNavigationDown;
+            @NavigationDown.performed += instance.OnNavigationDown;
+            @NavigationDown.canceled += instance.OnNavigationDown;
         }
 
         private void UnregisterCallbacks(IGamePlayActions instance)
@@ -334,9 +452,15 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
             @PlayerMove.started -= instance.OnPlayerMove;
             @PlayerMove.performed -= instance.OnPlayerMove;
             @PlayerMove.canceled -= instance.OnPlayerMove;
-            @PlayerInteract.started -= instance.OnPlayerInteract;
-            @PlayerInteract.performed -= instance.OnPlayerInteract;
-            @PlayerInteract.canceled -= instance.OnPlayerInteract;
+            @ConfirmButton.started -= instance.OnConfirmButton;
+            @ConfirmButton.performed -= instance.OnConfirmButton;
+            @ConfirmButton.canceled -= instance.OnConfirmButton;
+            @NavigationUp.started -= instance.OnNavigationUp;
+            @NavigationUp.performed -= instance.OnNavigationUp;
+            @NavigationUp.canceled -= instance.OnNavigationUp;
+            @NavigationDown.started -= instance.OnNavigationDown;
+            @NavigationDown.performed -= instance.OnNavigationDown;
+            @NavigationDown.canceled -= instance.OnNavigationDown;
         }
 
         public void RemoveCallbacks(IGamePlayActions instance)
@@ -357,6 +481,8 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
     public interface IGamePlayActions
     {
         void OnPlayerMove(InputAction.CallbackContext context);
-        void OnPlayerInteract(InputAction.CallbackContext context);
+        void OnConfirmButton(InputAction.CallbackContext context);
+        void OnNavigationUp(InputAction.CallbackContext context);
+        void OnNavigationDown(InputAction.CallbackContext context);
     }
 }

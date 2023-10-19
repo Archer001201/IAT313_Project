@@ -23,4 +23,32 @@ public static class EventHandler
     {
         OnCloseDialoguePanel?.Invoke();
     }
+
+    public static event Action<DialogueOption> OnShowDialogueOption;
+
+    public static void ShowDialogueOption(DialogueOption option)
+    {
+        OnShowDialogueOption?.Invoke(option);
+    }
+
+    public static event Action<DialogueOption> OnShowSelectedOption;
+
+    public static void ShowSelectedOption(DialogueOption option)
+    {
+        OnShowSelectedOption?.Invoke(option);
+    }
+
+    public static event Action OnNavigationUp;
+
+    public static void NavigationUp()
+    {
+        OnNavigationUp?.Invoke();
+    }
+
+    public static event Action OnNavigationDown;
+
+    public static void NavigationDown()
+    {
+        OnNavigationDown?.Invoke();
+    }
 }

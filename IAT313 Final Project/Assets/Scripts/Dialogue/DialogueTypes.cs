@@ -13,10 +13,11 @@ namespace Dialogue
     }
     
     [Serializable]
-    public class Option
+    public class DialogueOption
     {
         public string optionContent;
         public string nextDialogueEventID;
+        public bool isSelected;
     }
     
     [Serializable]
@@ -24,7 +25,7 @@ namespace Dialogue
     {
         public string dialogueEventID;
         public DialoguePiece[] dialogues;
-        public Option[] options;
+        public DialogueOption[] options;
     }
     
     [Serializable]

@@ -349,5 +349,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fab31cfd514e4d29be1cab28bc443ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canInteract: 0
-  interoperableSign: {fileID: 5244573455986410985}
+  canTalk: 0
+  interactableSign: {fileID: 5244573455986410985}

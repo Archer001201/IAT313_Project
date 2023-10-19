@@ -21,7 +21,17 @@
         }
       ],
 
-      "options" : []
+      "options" : [
+        {
+          "optionContent" : "option A",
+          "nextDialogueEventID" : "001"
+        },
+
+        {
+          "optionContent" : "option B",
+          "nextDialogueEventID" : "002"
+        }
+      ]
     }
   ]
 }
