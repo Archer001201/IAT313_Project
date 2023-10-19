@@ -502,19 +502,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42ec3ea77baf43daa23d5b9b9d426b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePieces:
-  - name: 
-    figure: {fileID: 0}
-    dialogue: Hello World
-    hasToPause: 1
-    isDone: 0
-  - name: 
-    figure: {fileID: 0}
-    dialogue: Hello world
-    hasToPause: 1
-    isDone: 0
-  - name: 
-    figure: {fileID: 0}
-    dialogue: Bye
-    hasToPause: 1
-    isDone: 0
+  dialogueEvents:
+  - dialogueEventID: 001
+    dialoguePieces:
+    - name: 
+      character: {fileID: 0}
+      content: ......
+      isDone: 0
+    - name: Yvonne
+      character: {fileID: 6994826097779115174, guid: 53b6a0ad845eb4fceaa6398631dd186c, type: 3}
+      content: Hello
+      isDone: 0
+    - name: Vincent
+      character: {fileID: -8076542536797633547, guid: dff61b3bccfe74b4192cf8861d13958e, type: 3}
+      content: Hello
+      isDone: 0
+  - dialogueEventID: 
+    dialoguePieces: []
+  canTalk: 0
+  currentDialogueEventID: 

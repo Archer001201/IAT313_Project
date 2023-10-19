@@ -1,0 +1,37 @@
+{
+  "dialogueEventID" : "000",
+  
+  "dialogues" : [
+    {
+      "name" : "name",
+      "content" : "content"
+    },
+    
+    {
+      "name" : "name",
+      "content" : "content"
+    },
+    
+    {
+      "name" : "name",
+      "content" : "content"
+    }
+  ],
+  
+  "options" : [
+    {
+      "optionContent" : "option content",
+      "nextDialogueEventID" : "000"
+    },
+    
+    {
+      "optionContent" : "option content",
+      "nextDialogueEventID" : "000"
+    },
+    
+    {
+      "optionContent" : "option content",
+      "nextDialogueEventID" : "000"
+    }
+  ]
+}

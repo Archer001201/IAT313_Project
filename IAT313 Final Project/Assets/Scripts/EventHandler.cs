@@ -3,11 +3,11 @@ using Dialogue;
 
 public static class EventHandler
 {
-    public static event Action<string> OnOpenDialoguePanel;
+    public static event Action OnOpenDialoguePanel;
 
-    public static void OpenDialoguePanel(string type)
+    public static void OpenDialoguePanel()
     {
-        OnOpenDialoguePanel?.Invoke(type);
+        OnOpenDialoguePanel?.Invoke();
     }
 
     public static event Action<DialoguePiece> OnShowDialoguePiece;

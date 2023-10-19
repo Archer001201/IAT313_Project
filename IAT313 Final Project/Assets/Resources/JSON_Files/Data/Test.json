@@ -1,0 +1,27 @@
+{
+  "dialogueEventSetID" : "001",
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "001",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "Hello world"
+        },
+
+        {
+          "name" : "Yvonne",
+          "content" : "Hello world"
+        },
+
+        {
+          "name" : "",
+          "content" : "Bye bye"
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

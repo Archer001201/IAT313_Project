@@ -15,7 +15,12 @@ namespace UI
         [SerializeField] private Image figure;
         [SerializeField] private TextMeshProUGUI dialogue;
         [SerializeField] private GameObject continueBox;
-        
+
+        private void Awake()
+        {
+            dialoguePanel.SetActive(false);
+        }
+
         private void OnEnable()
         {
             EventHandler.OnShowDialoguePiece += UpdateDialoguePanel;
@@ -29,13 +34,15 @@ namespace UI
 
         private void UpdateDialoguePanel(DialoguePiece piece)
         {
+            dialoguePanel.SetActive(true);
             StartCoroutine(UpdateDialoguePanelRoutine(piece));
         }
 
         private IEnumerator UpdateDialoguePanelRoutine(DialoguePiece piece)
         {
             if (piece == null) yield break;
-            piece.isDone = false;
+            dialoguePanel.SetActive(true);
+            piece.isRead = false;
             dialogue.text = string.Empty;
             continueBox.SetActive(false);
 
@@ -44,16 +51,16 @@ namespace UI
                 dialoguePanel.SetActive(true);
                 identity.SetActive(true);
                 charName.text = piece.name;
-                figure.sprite = piece.figure;
+                figure.sprite = Resources.Load<Sprite>("Characters/" + piece.name);
             }
             else
             {
                 identity.SetActive(false);
             }
 
-            yield return dialogue.DOText(piece.dialogue, 1f).WaitForCompletion();
-            piece.isDone = true;
-            if (piece.hasToPause && piece.isDone)
+            yield return dialogue.DOText(piece.content, 1f).WaitForCompletion();
+            piece.isRead = true;
+            if (piece.isRead)
             {
                 continueBox.SetActive(true);
             }

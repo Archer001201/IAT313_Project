@@ -1,3 +1,4 @@
+using Dialogue;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,9 +8,9 @@ namespace Player
     {
         private InputControls _inputControls;
 
-        public bool canInteract;
+        public bool canTalk;
         public GameObject interoperableSign;
-
+        
         private void Awake()
         {
             _inputControls = new InputControls();
@@ -29,14 +30,14 @@ namespace Player
 
         private void Update()
         {
-            interoperableSign.SetActive(canInteract);
+            interoperableSign.SetActive(canTalk);
         }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("InteroperableObject"))
             {
-                canInteract = true;
+                canTalk = other.GetComponentInParent<DialogueManager>().canTalk;
             }
         }
 
@@ -44,13 +45,13 @@ namespace Player
         {
             if (other.CompareTag("InteroperableObject"))
             {
-                canInteract = false;
+                canTalk = false;
             }
         }
 
         private void OpenDialogueCanvas(InputAction.CallbackContext context)
         {
-            EventHandler.OpenDialoguePanel("dialogue");
+            if (canTalk) EventHandler.OpenDialoguePanel();
         }
     }
 }

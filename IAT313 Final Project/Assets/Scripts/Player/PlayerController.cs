@@ -23,7 +23,7 @@ namespace Player
         private void OnEnable()
         {
             _inputControls.Enable();
-            EventHandler.OnOpenDialoguePanel += _ => canMove = false;
+            EventHandler.OnOpenDialoguePanel += () => canMove = false;
             EventHandler.OnCloseDialoguePanel += () => canMove = true;
         }
 
