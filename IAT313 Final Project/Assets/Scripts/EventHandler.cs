@@ -32,7 +32,7 @@ public static class EventHandler
     }
 
     public static event Action<DialogueOption> OnShowSelectedOption;
-
+    
     public static void ShowSelectedOption(DialogueOption option)
     {
         OnShowSelectedOption?.Invoke(option);
@@ -51,14 +51,7 @@ public static class EventHandler
     {
         OnNavigationDown?.Invoke();
     }
-
-    // public static event Action OnConfirmSelection;
-    //
-    // public static void ConfirmSelection()
-    // {
-    //     OnConfirmSelection?.Invoke();
-    // }
-
+    
     public static event Action OnDestroyOptions;
 
     public static void DestroyOptions()

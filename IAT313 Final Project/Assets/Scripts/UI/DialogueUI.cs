@@ -1,9 +1,7 @@
-using System;
 using System.Collections;
 using DG.Tweening;
 using Dialogue;
 using TMPro;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -86,6 +84,7 @@ namespace UI
                 continueBox.SetActive(true);
             }
         }
+
 
         // ReSharper disable Unity.PerformanceAnalysis
         private void UpdateDialogueOption(DialogueOption option)

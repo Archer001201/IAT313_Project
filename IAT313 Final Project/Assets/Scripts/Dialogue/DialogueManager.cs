@@ -28,7 +28,7 @@ namespace Dialogue
         {
             EventHandler.OnOpenDialoguePanel += () =>
             {
-                if (_isSelecting) SelectionConfirmed();
+                if (_isSelecting && _dialogueOptions != null) SelectionConfirmed();
                 if (!_isTalking && _dialogueStack!=null) StartCoroutine(DialogueRoutine());
             };
 
@@ -45,15 +45,7 @@ namespace Dialogue
         private void Update()
         {
             if (_dialogueStack != null) canTalk = true;
-            if (_dialogueOptions != null)
-            {
-                for (int i = 0; i < _dialogueOptions.Length; i++)
-                {
-                    DialogueOption option = _dialogueOptions[i];
-                    option.isSelected = i == _currentOptionIndex;
-                    EventHandler.ShowSelectedOption(option);
-                }
-            }
+            UpdateOptionHighlight();
         }
 
         private void LoadJson(string fileName)
@@ -76,7 +68,7 @@ namespace Dialogue
             foreach (var dialogueEvent in dialogueEventSet.dialogueEvents.Where(dialogueEvent => dialogueEvent.dialogueEventID.Equals(currentDialogueEventID)))
             {
                 currentDialogueEvent = dialogueEvent.dialogues;
-                _dialogueOptions = dialogueEvent.options;
+                _dialogueOptions = dialogueEvent.options.Length > 0 ? dialogueEvent.options : null;
                 _currentOptionIndex = 0;
             }
             if (currentDialogueEvent == null) return;
@@ -125,11 +117,22 @@ namespace Dialogue
         {
             currentDialogueEventID = _dialogueOptions[_currentOptionIndex].nextDialogueEventID;
             Debug.Log(currentDialogueEventID);
-            FillDialogueStack();
             _isSelecting = false;
             _isTalking = false;
             _dialogueOptions = null;
             EventHandler.DestroyOptions();
+            FillDialogueStack();
+        }
+
+        private void UpdateOptionHighlight()
+        {
+            if (_dialogueOptions == null) return;
+            for (int i = 0; i < _dialogueOptions.Length; i++)
+            {
+                DialogueOption option = _dialogueOptions[i];
+                option.isSelected = i == _currentOptionIndex;
+                EventHandler.ShowSelectedOption(option);
+            }
         }
     }
 }

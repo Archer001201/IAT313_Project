@@ -49,7 +49,17 @@
         }
       ],
 
-      "options" : []
+      "options" : [
+        {
+          "optionContent" : "option A",
+          "nextDialogueEventID" : "003A"
+        },
+
+        {
+          "optionContent" : "option B",
+          "nextDialogueEventID" : "003B"
+        }
+      ]
     },
     
     {
@@ -64,6 +74,47 @@
         {
           "name" : "Yvonne",
           "content" : "Good 002B"
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "option A",
+          "nextDialogueEventID" : "003A"
+        }
+      ]
+    },
+
+    {
+      "dialogueEventID" : "003A",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "This is 003A"
+        },
+
+        {
+          "name" : "Yvonne",
+          "content" : "Good 003A"
+        }
+      ],
+
+      "options" : []
+    },
+
+    {
+      "dialogueEventID" : "003B",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "This is 003B"
+        },
+
+        {
+          "name" : "Yvonne",
+          "content" : "Good 003B"
         }
       ],
 

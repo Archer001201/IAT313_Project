@@ -17,7 +17,6 @@ namespace Player
             _inputControls.GamePlay.ConfirmButton.performed += OpenDialogueCanvas;
             _inputControls.GamePlay.NavigationDown.performed += _ => EventHandler.NavigationDown();
             _inputControls.GamePlay.NavigationUp.performed += _ => EventHandler.NavigationUp();
-            // _inputControls.GamePlay.ConfirmButton.performed += _ => EventHandler.ConfirmSelection();
         }
 
         private void OnEnable()
@@ -54,7 +53,6 @@ namespace Player
         private void OpenDialogueCanvas(InputAction.CallbackContext context)
         {
             if (canTalk) EventHandler.OpenDialoguePanel();
-            // EventHandler.ConfirmSelection();
         }
     }
 }
