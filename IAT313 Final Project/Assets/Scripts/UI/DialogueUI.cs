@@ -32,6 +32,7 @@ namespace UI
             EventHandler.OnCloseDialoguePanel += () => dialoguePanel.SetActive(false);
             EventHandler.OnShowDialogueOption += UpdateDialogueOption;
             EventHandler.OnShowSelectedOption += UpdateSelectedOption;
+            EventHandler.OnDestroyOptions += DestroyAllOptions;
         }
 
         private void OnDisable()
@@ -39,6 +40,7 @@ namespace UI
             EventHandler.OnShowDialoguePiece -= UpdateDialoguePanel;
             EventHandler.OnShowDialogueOption -= UpdateDialogueOption;
             EventHandler.OnShowSelectedOption -= UpdateSelectedOption;
+            EventHandler.OnDestroyOptions -= DestroyAllOptions;
         }
 
         private void Update()
@@ -105,6 +107,15 @@ namespace UI
                 {
                     iOption.GetChild(0).gameObject.SetActive(option.isSelected);
                 }
+            }
+        }
+
+        private void DestroyAllOptions()
+        {
+            Transform optionBoxTrans = optionBox.transform;
+            foreach (Transform child in optionBoxTrans)
+            {
+                Destroy(child.gameObject);
             }
         }
     }

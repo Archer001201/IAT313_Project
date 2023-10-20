@@ -7,13 +7,13 @@ namespace Dialogue
 {
     public class DialogueManager : MonoBehaviour
     {
-        // public List<DialogueEvent> dialogueEvents;
         public DialogueEventSet dialogueEventSet;
         public bool canTalk;
         
         private Stack<DialoguePiece> _dialogueStack;
         private DialogueOption[] _dialogueOptions;
         private bool _isTalking;
+        private bool _isSelecting;
         [SerializeField] private string currentDialogueEventID;
         private int _currentOptionIndex;
 
@@ -28,23 +28,24 @@ namespace Dialogue
         {
             EventHandler.OnOpenDialoguePanel += () =>
             {
+                if (_isSelecting) SelectionConfirmed();
                 if (!_isTalking && _dialogueStack!=null) StartCoroutine(DialogueRoutine());
             };
 
             EventHandler.OnNavigationUp += () =>
             {
-                if (_currentOptionIndex > 0) _currentOptionIndex--;
+                if (_isSelecting && _currentOptionIndex > 0) _currentOptionIndex--;
             };
             EventHandler.OnNavigationDown += () =>
             {
-                if (_currentOptionIndex < _dialogueOptions.Length-1) _currentOptionIndex++;
+                if (_isSelecting && _currentOptionIndex < _dialogueOptions.Length-1) _currentOptionIndex++;
             };
         }
 
         private void Update()
         {
             if (_dialogueStack != null) canTalk = true;
-            if (_dialogueOptions.Length > 0)
+            if (_dialogueOptions != null)
             {
                 for (int i = 0; i < _dialogueOptions.Length; i++)
                 {
@@ -101,7 +102,8 @@ namespace Dialogue
                 if (_dialogueOptions != null)
                 {
                     ShowDialogueOptions(_dialogueOptions);
-                    FillDialogueStack();
+                    yield return new WaitForSeconds(0.5f);
+                    _isSelecting = true;
                 }
                 else
                 {
@@ -117,6 +119,17 @@ namespace Dialogue
             {
                 EventHandler.ShowDialogueOption(option);
             }
+        }
+
+        private void SelectionConfirmed()
+        {
+            currentDialogueEventID = _dialogueOptions[_currentOptionIndex].nextDialogueEventID;
+            Debug.Log(currentDialogueEventID);
+            FillDialogueStack();
+            _isSelecting = false;
+            _isTalking = false;
+            _dialogueOptions = null;
+            EventHandler.DestroyOptions();
         }
     }
 }

@@ -51,4 +51,18 @@ public static class EventHandler
     {
         OnNavigationDown?.Invoke();
     }
+
+    // public static event Action OnConfirmSelection;
+    //
+    // public static void ConfirmSelection()
+    // {
+    //     OnConfirmSelection?.Invoke();
+    // }
+
+    public static event Action OnDestroyOptions;
+
+    public static void DestroyOptions()
+    {
+        OnDestroyOptions?.Invoke();
+    }
 }

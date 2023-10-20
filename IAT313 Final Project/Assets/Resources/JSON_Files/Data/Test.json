@@ -24,14 +24,50 @@
       "options" : [
         {
           "optionContent" : "option A",
-          "nextDialogueEventID" : "001"
+          "nextDialogueEventID" : "002A"
         },
 
         {
           "optionContent" : "option B",
-          "nextDialogueEventID" : "002"
+          "nextDialogueEventID" : "002B"
         }
       ]
+    },
+    
+    {
+      "dialogueEventID" : "002A",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "This is 002A"
+        },
+
+        {
+          "name" : "Yvonne",
+          "content" : "Good 002A"
+        }
+      ],
+
+      "options" : []
+    },
+    
+    {
+      "dialogueEventID" : "002B",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "This is 002B"
+        },
+
+        {
+          "name" : "Yvonne",
+          "content" : "Good 002B"
+        }
+      ],
+
+      "options" : []
     }
   ]
 }
