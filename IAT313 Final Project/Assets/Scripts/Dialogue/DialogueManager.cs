@@ -7,8 +7,10 @@ namespace Dialogue
 {
     public class DialogueManager : MonoBehaviour
     {
-        public DialogueEventSet dialogueEventSet;
         public bool canTalk;
+
+        [SerializeField] private string jsonFile;
+        [SerializeField] private DialogueEventSet dialogueEventSet;
         
         private Stack<DialoguePiece> _dialogueStack;
         private DialogueOption[] _dialogueOptions;
@@ -20,7 +22,7 @@ namespace Dialogue
         private void Awake()
         {
             currentDialogueEventID = "001";
-            LoadJson("Test");
+            LoadJson(jsonFile);
             FillDialogueStack();
         }
 
@@ -54,11 +56,10 @@ namespace Dialogue
             if (jsonTextAsset != null)
             {
                 dialogueEventSet = JsonUtility.FromJson<DialogueEventSet>(jsonTextAsset.text);
-                Debug.Log("loaded");
             }
             else
             {
-                Debug.Log("failed loading");
+                Debug.LogError(fileName + ".json can not be loaded");
             }
         }
 
@@ -116,7 +117,6 @@ namespace Dialogue
         private void SelectionConfirmed()
         {
             currentDialogueEventID = _dialogueOptions[_currentOptionIndex].nextDialogueEventID;
-            Debug.Log(currentDialogueEventID);
             _isSelecting = false;
             _isTalking = false;
             _dialogueOptions = null;

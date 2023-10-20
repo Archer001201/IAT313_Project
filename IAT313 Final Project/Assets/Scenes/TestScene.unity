@@ -502,9 +502,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42ec3ea77baf43daa23d5b9b9d426b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canTalk: 0
+  jsonFile: Test
   dialogueEventSet:
     dialogueEventSetId: 
     dialogueEvents: []
-  canTalk: 0
   currentDialogueEventID: 
-  _currentOptionIndex: 0
