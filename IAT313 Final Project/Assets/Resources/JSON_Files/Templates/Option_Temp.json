@@ -1,4 +1,6 @@
 {
   "optionContent" : "option content",
-  "nextDialogueEventID" : "000"
+  "nextDialogueEventID" : "000",
+  "effect" : [0,0,0],
+  "***comment for effect***" : ["stress", "love", "study"]
 }

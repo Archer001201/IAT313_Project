@@ -29,7 +29,8 @@
 
         {
           "optionContent" : "option B",
-          "nextDialogueEventID" : "002B"
+          "nextDialogueEventID" : "002B",
+          "effect" : [1,1,1]
         }
       ]
     },

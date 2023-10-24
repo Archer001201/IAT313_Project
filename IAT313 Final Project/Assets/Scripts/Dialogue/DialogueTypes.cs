@@ -17,6 +17,7 @@ namespace Dialogue
     {
         public string optionContent;
         public string nextDialogueEventID;
+        public float[] effect;
         public bool isSelected;
     }
     
