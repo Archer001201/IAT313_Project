@@ -1,7 +1,7 @@
 {
-  "dialogueEventSetID" : "001",
-  "character" : "Yvonne",
-  "mainEvent" : false,
+  "dialogueEventSetID" : "000",
+  "character" : "Vincent",
+  "mainEvent" : true,
   "dialogueEvents" : [
     {
       "dialogueEventID" : "001",
@@ -9,28 +9,23 @@
       "dialogues" : [
         {
           "name" : "Vincent",
-          "content" : "Hello world"
+          "content" : "this is test2"
         },
 
         {
           "name" : "Yvonne",
-          "content" : "Hello world"
-        },
-
-        {
-          "name" : "",
-          "content" : "Bye bye"
+          "content" : "test2 dialogue"
         }
       ],
 
       "options" : [
         {
-          "optionContent" : "option A",
+          "optionContent" : "test 2 option 1",
           "nextDialogueEventID" : "002A"
         },
 
         {
-          "optionContent" : "option B",
+          "optionContent" : "test 2 option 2",
           "nextDialogueEventID" : "002B",
           "effect" : [1,1,1]
         }

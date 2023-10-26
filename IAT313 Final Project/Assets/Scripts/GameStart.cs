@@ -26,12 +26,14 @@ public class GameStart : MonoBehaviour
         Instantiate(_player, new Vector3(0, 0, 0), quaternion.identity);
         Instantiate(_mainCanvas, new Vector3(0, 0, 0), quaternion.identity);
         
-        InstantiateEvent(new Vector3(1,1,0),"test");
+        InstantiateEvent(new Vector3(1,1,0),"test1");
+        InstantiateEvent(new Vector3(-1,-1,0),"test2");
     }
 
     private void InstantiateEvent(Vector3 pos, string fileName)
     {
+        DialogueController dialogueController = _npc.GetComponent<DialogueController>();
+        dialogueController.InitializeDialogueData(fileName);
         GameObject eventInstance = Instantiate(_npc, pos, quaternion.identity);
-        eventInstance.GetComponent<DialogueController>().jsonFile = fileName;
     }
 }

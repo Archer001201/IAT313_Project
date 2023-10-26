@@ -1,0 +1,127 @@
+{
+  "dialogueEventSetID" : "000",
+  "character" : "Yvonne",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "001",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "Hello world"
+        },
+
+        {
+          "name" : "Yvonne",
+          "content" : "Hello world"
+        },
+
+        {
+          "name" : "",
+          "content" : "Bye bye"
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "option A",
+          "nextDialogueEventID" : "002A"
+        },
+
+        {
+          "optionContent" : "option B",
+          "nextDialogueEventID" : "002B",
+          "effect" : [1,1,1]
+        }
+      ]
+    },
+    
+    {
+      "dialogueEventID" : "002A",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "This is 002A"
+        },
+
+        {
+          "name" : "Yvonne",
+          "content" : "Good 002A"
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "option A",
+          "nextDialogueEventID" : "003A"
+        },
+
+        {
+          "optionContent" : "option B",
+          "nextDialogueEventID" : "003B"
+        }
+      ]
+    },
+    
+    {
+      "dialogueEventID" : "002B",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "This is 002B"
+        },
+
+        {
+          "name" : "Yvonne",
+          "content" : "Good 002B"
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "option A",
+          "nextDialogueEventID" : "003A"
+        }
+      ]
+    },
+
+    {
+      "dialogueEventID" : "003A",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "This is 003A"
+        },
+
+        {
+          "name" : "Yvonne",
+          "content" : "Good 003A"
+        }
+      ],
+
+      "options" : []
+    },
+
+    {
+      "dialogueEventID" : "003B",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "This is 003B"
+        },
+
+        {
+          "name" : "Yvonne",
+          "content" : "Good 003B"
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,30 +35,36 @@ namespace Dialogue
             nameText.text = dialogueEventSet.character;
             _character = GetComponent<SpriteRenderer>();
             _character.sprite = Resources.Load<Sprite>("Characters/" + dialogueEventSet.character);
+            this.enabled = false;
         }
 
         private void OnEnable()
         {
-            EventHandler.OnOpenDialoguePanel += () =>
-            {
-                if (_isSelecting && _dialogueOptions != null) SelectionConfirmed();
-                if (!_isTalking && _dialogueStack != null) StartCoroutine(DialogueRoutine());
-            };
+            _isTalking = false;
+            _isSelecting = false;
+            EventHandler.OnOpenDialoguePanel += HandleOpenDialoguePanel;
 
-            EventHandler.OnNavigationUp += () =>
-            {
-                if (_isSelecting && _currentOptionIndex > 0) _currentOptionIndex--;
-            };
-            EventHandler.OnNavigationDown += () =>
-            {
-                if (_isSelecting && _currentOptionIndex < _dialogueOptions.Length-1) _currentOptionIndex++;
-            };
+            EventHandler.OnNavigationUp += HandleNavigationUp;
+            EventHandler.OnNavigationDown += HandleNavigationDown;
+        }
+
+        private void OnDisable()
+        {
+            EventHandler.OnOpenDialoguePanel -= HandleOpenDialoguePanel;
+
+            EventHandler.OnNavigationUp -= HandleNavigationUp;
+            EventHandler.OnNavigationDown -= HandleNavigationDown;
         }
 
         private void Update()
         {
             // if (_dialogueStack != null) canTalk = true;
             UpdateOptionHighlight();
+        }
+
+        public void InitializeDialogueData(string fileName)
+        {
+            jsonFile = fileName;
         }
 
         private void LoadJson(string fileName)
@@ -148,6 +155,22 @@ namespace Dialogue
                 option.isSelected = i == _currentOptionIndex;
                 EventHandler.ShowSelectedOption(option);
             }
+        }
+        
+        private void HandleOpenDialoguePanel()
+        {
+            if (_isSelecting && _dialogueOptions != null) SelectionConfirmed();
+            if (!_isTalking && _dialogueStack != null) StartCoroutine(DialogueRoutine());
+        }
+
+        private void HandleNavigationUp()
+        {
+            if (_isSelecting && _currentOptionIndex > 0) _currentOptionIndex--;
+        }
+
+        private void HandleNavigationDown()
+        {
+            if (_isSelecting && _currentOptionIndex < _dialogueOptions.Length-1) _currentOptionIndex++;
         }
     }
 }

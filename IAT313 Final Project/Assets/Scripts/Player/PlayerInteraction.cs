@@ -42,6 +42,7 @@ namespace Player
         {
             if (other.CompareTag("InteroperableObject"))
             {
+                other.GetComponentInParent<DialogueController>().enabled = true;
                 canTalk = other.GetComponentInParent<DialogueController>().canTalk;
                 interactableSign.SetActive(canTalk);
             }
@@ -51,6 +52,7 @@ namespace Player
         {
             if (other.CompareTag("InteroperableObject"))
             {
+                other.GetComponentInParent<DialogueController>().enabled = false;
                 canTalk = false;
                 interactableSign.SetActive(canTalk);
             }
