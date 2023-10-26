@@ -22,6 +22,10 @@ namespace Player
         private void OnEnable()
         {
             _inputControls.Enable();
+            EventHandler.OnCloseInteractableSign += () =>
+            {
+                interactableSign.SetActive(false);
+            };
         }
 
         private void OnDisable()
@@ -29,16 +33,17 @@ namespace Player
             _inputControls.Disable();
         }
 
-        private void Update()
-        {
-            interactableSign.SetActive(canTalk);
-        }
+        // private void Update()
+        // {
+        //     interactableSign.SetActive(canTalk);
+        // }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("InteroperableObject"))
             {
-                canTalk = other.GetComponentInParent<DialogueManager>().canTalk;
+                canTalk = other.GetComponentInParent<DialogueController>().canTalk;
+                interactableSign.SetActive(canTalk);
             }
         }
 
@@ -47,6 +52,7 @@ namespace Player
             if (other.CompareTag("InteroperableObject"))
             {
                 canTalk = false;
+                interactableSign.SetActive(canTalk);
             }
         }
 

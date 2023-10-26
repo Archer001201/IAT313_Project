@@ -1,5 +1,7 @@
 {
   "dialogueEventSetID" : "001",
+  "character" : "Yvonne",
+  "mainEvent" : false,
   "dialogueEvents" : [
     {
       "dialogueEventID" : "001",

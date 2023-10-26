@@ -33,6 +33,8 @@ namespace Dialogue
     public class DialogueEventSet
     {
         public string dialogueEventSetId;
+        public string character;
+        public bool mainEvent;
         public DialogueEvent[] dialogueEvents;
     }
 }

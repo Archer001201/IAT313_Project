@@ -58,4 +58,18 @@ public static class EventHandler
     {
         OnDestroyOptions?.Invoke();
     }
+
+    public static event Action<float[]> OnAfterEventEffect;
+
+    public static void AfterEventEffect(float[] effect)
+    {
+        OnAfterEventEffect?.Invoke(effect);
+    }
+
+    public static event Action OnCloseInteractableSign;
+
+    public static void CloseInteractableSign()
+    {
+        OnCloseInteractableSign?.Invoke();
+    }
 }

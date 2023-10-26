@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 namespace Dialogue
 {
-    public class DialogueManager : MonoBehaviour
+    public class DialogueController : MonoBehaviour
     {
+        public string jsonFile;
+        
         public bool canTalk;
-
-        [SerializeField] private string jsonFile;
+        private SpriteRenderer _character;
+        
+        [SerializeField] private TextMeshProUGUI nameText;
         [SerializeField] private DialogueEventSet dialogueEventSet;
         
         private Stack<DialoguePiece> _dialogueStack;
@@ -21,9 +25,15 @@ namespace Dialogue
 
         private void Awake()
         {
+            canTalk = true;
             currentDialogueEventID = "001";
             LoadJson(jsonFile);
             FillDialogueStack();
+
+            nameText.color = dialogueEventSet.mainEvent ? new Color(1, 1, 0) : new Color(1, 1, 1);
+            nameText.text = dialogueEventSet.character;
+            _character = GetComponent<SpriteRenderer>();
+            _character.sprite = Resources.Load<Sprite>("Characters/" + dialogueEventSet.character);
         }
 
         private void OnEnable()
@@ -31,7 +41,7 @@ namespace Dialogue
             EventHandler.OnOpenDialoguePanel += () =>
             {
                 if (_isSelecting && _dialogueOptions != null) SelectionConfirmed();
-                if (!_isTalking && _dialogueStack!=null) StartCoroutine(DialogueRoutine());
+                if (!_isTalking && _dialogueStack != null) StartCoroutine(DialogueRoutine());
             };
 
             EventHandler.OnNavigationUp += () =>
@@ -46,7 +56,7 @@ namespace Dialogue
 
         private void Update()
         {
-            if (_dialogueStack != null) canTalk = true;
+            // if (_dialogueStack != null) canTalk = true;
             UpdateOptionHighlight();
         }
 
@@ -83,6 +93,7 @@ namespace Dialogue
 
         private IEnumerator DialogueRoutine()
         {
+            EventHandler.CloseInteractableSign();
             _isTalking = true;
             if (_dialogueStack.TryPop(out var piece))
             {
@@ -101,6 +112,8 @@ namespace Dialogue
                 else
                 {
                     _isTalking = false;
+                    canTalk = false;
+                    nameText.color = new Color(0.5f,0.5f,0.5f);
                     EventHandler.CloseDialoguePanel();
                 }
             }
@@ -116,6 +129,8 @@ namespace Dialogue
 
         private void SelectionConfirmed()
         {
+            if (_dialogueOptions[_currentOptionIndex].effect != null)
+                EventHandler.AfterEventEffect(_dialogueOptions[_currentOptionIndex].effect);
             currentDialogueEventID = _dialogueOptions[_currentOptionIndex].nextDialogueEventID;
             _isSelecting = false;
             _isTalking = false;
