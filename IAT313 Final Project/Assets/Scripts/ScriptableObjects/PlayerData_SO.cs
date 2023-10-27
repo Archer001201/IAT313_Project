@@ -1,8 +1,10 @@
 using UnityEngine;
 
-namespace Player
+namespace ScriptableObjects
 {
-    public class PlayerAttributes : MonoBehaviour
+    [CreateAssetMenu(fileName = "PlayerData_SO", menuName = "Scriptable Object/Player Data")]
+    // ReSharper disable once InconsistentNaming
+    public class PlayerData_SO : ScriptableObject
     {
         public float stress;
         public float love;
