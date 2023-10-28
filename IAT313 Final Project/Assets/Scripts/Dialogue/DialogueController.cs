@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using ScriptableObjects;
 using TMPro;
 using UnityEngine;
 
@@ -13,6 +14,7 @@ namespace Dialogue
         
         public bool canTalk;
         private SpriteRenderer _character;
+        private PlayerData_SO _playerData;
         
         [SerializeField] private TextMeshProUGUI nameText;
         [SerializeField] private DialogueEventSet dialogueEventSet;
@@ -31,6 +33,7 @@ namespace Dialogue
             LoadJson(jsonFile);
             FillDialogueStack();
 
+            _playerData = Resources.Load<PlayerData_SO>("Data_SO/PlayerData_SO");
             nameText.color = dialogueEventSet.mainEvent ? new Color(1, 1, 0) : new Color(1, 1, 1);
             nameText.text = dialogueEventSet.character;
             _character = GetComponent<SpriteRenderer>();
@@ -41,7 +44,9 @@ namespace Dialogue
         private void OnEnable()
         {
             _isTalking = false;
-            _isSelecting = false;
+            _isSelecting = false; 
+            if (dialogueEventSet.mainEvent && _playerData.actionPoint < 1) canTalk = false;
+            
             EventHandler.OnOpenDialoguePanel += HandleOpenDialoguePanel;
 
             EventHandler.OnNavigationUp += HandleNavigationUp;
@@ -58,8 +63,8 @@ namespace Dialogue
 
         private void Update()
         {
-            // if (_dialogueStack != null) canTalk = true;
             UpdateOptionHighlight();
+            
         }
 
         public void InitializeDialogueData(string fileName)
@@ -121,6 +126,7 @@ namespace Dialogue
                     _isTalking = false;
                     canTalk = false;
                     nameText.color = new Color(0.5f,0.5f,0.5f);
+                    if (dialogueEventSet.mainEvent) EventHandler.CostActionPoint();
                     EventHandler.CloseDialoguePanel();
                 }
             }

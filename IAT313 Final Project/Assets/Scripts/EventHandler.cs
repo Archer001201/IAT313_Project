@@ -72,4 +72,11 @@ public static class EventHandler
     {
         OnCloseInteractableSign?.Invoke();
     }
+
+    public static event Action OnCostActionPoint;
+
+    public static void CostActionPoint()
+    {
+        OnCostActionPoint?.Invoke();
+    }
 }

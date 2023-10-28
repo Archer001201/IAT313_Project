@@ -9,6 +9,7 @@ namespace ScriptableObjects
         public float stress;
         public float love;
         public float study;
+        public int actionPoint;
         
         private void OnEnable()
         {
