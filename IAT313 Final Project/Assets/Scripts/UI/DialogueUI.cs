@@ -27,7 +27,7 @@ namespace UI
         {
             currentOptionIndex = 0;
             EventHandler.OnShowDialoguePiece += UpdateDialoguePanel;
-            EventHandler.OnCloseDialoguePanel += () => dialoguePanel.SetActive(false);
+            EventHandler.OnCloseDialoguePanel += HandleCloseDialoguePanel;
             EventHandler.OnShowDialogueOption += UpdateDialogueOption;
             EventHandler.OnShowSelectedOption += UpdateSelectedOption;
             EventHandler.OnDestroyOptions += DestroyAllOptions;
@@ -39,6 +39,7 @@ namespace UI
             EventHandler.OnShowDialogueOption -= UpdateDialogueOption;
             EventHandler.OnShowSelectedOption -= UpdateSelectedOption;
             EventHandler.OnDestroyOptions -= DestroyAllOptions;
+            EventHandler.OnCloseDialoguePanel -= HandleCloseDialoguePanel;
         }
 
         private void Update()
@@ -116,6 +117,11 @@ namespace UI
             {
                 Destroy(child.gameObject);
             }
+        }
+
+        private void HandleCloseDialoguePanel()
+        {
+            dialoguePanel.SetActive(false);
         }
     }
 }

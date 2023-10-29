@@ -24,3 +24,5 @@ MonoBehaviour:
       position: {x: 1, y: 2, z: 0}
     - fileName: test2
       position: {x: 3, y: 3, z: 0}
+    - fileName: test1
+      position: {x: -3, y: -3, z: 0}

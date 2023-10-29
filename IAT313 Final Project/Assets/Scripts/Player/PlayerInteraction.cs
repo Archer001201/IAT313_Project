@@ -22,21 +22,14 @@ namespace Player
         private void OnEnable()
         {
             _inputControls.Enable();
-            EventHandler.OnCloseInteractableSign += () =>
-            {
-                interactableSign.SetActive(false);
-            };
+            EventHandler.OnCloseInteractableSign += HandleCloseInteractableSign;
         }
 
         private void OnDisable()
         {
             _inputControls.Disable();
+            EventHandler.OnCloseInteractableSign -= HandleCloseInteractableSign;
         }
-
-        // private void Update()
-        // {
-        //     interactableSign.SetActive(canTalk);
-        // }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
@@ -61,6 +54,11 @@ namespace Player
         private void OpenDialogueCanvas(InputAction.CallbackContext context)
         {
             if (canTalk) EventHandler.OpenDialoguePanel();
+        }
+
+        private void HandleCloseInteractableSign()
+        {
+            interactableSign.SetActive(false);
         }
     }
 }

@@ -28,12 +28,12 @@ namespace UI
 
         private void OnEnable()
         {
-            EventHandler.OnCostActionPoint += () =>
-            {
-                if (playerData.actionPoint <= 0) return;
-                Destroy(actionBar.transform.GetChild(0).gameObject);
-                playerData.actionPoint -= 1;
-            };
+            EventHandler.OnCostActionPoint += HandleCostActionPoint;
+        }
+
+        private void OnDisable()
+        {
+            EventHandler.OnCostActionPoint -= HandleCostActionPoint;
         }
 
         private void Update()
@@ -42,7 +42,12 @@ namespace UI
             loveFill.fillAmount = playerData.love/10;
             studyFill.fillAmount = playerData.study/10;
         }
-        
-        
+
+        private void HandleCostActionPoint()
+        {
+            if (playerData.actionPoint <= 0) return;
+            Destroy(actionBar.transform.GetChild(0).gameObject);
+            playerData.actionPoint -= 1;
+        }
     }
 }
