@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e04af395a5b6453ab8b4a40bc8d306e, type: 3}
   m_Name: PlayerData_SO
   m_EditorClassIdentifier: 
-  stress: 4
-  love: 6
-  study: 7
-  actionPoint: 0
+  stress: 6
+  love: 8
+  study: 9
+  actionPoint: 1

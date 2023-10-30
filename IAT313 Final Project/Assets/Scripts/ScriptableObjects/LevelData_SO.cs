@@ -6,9 +6,9 @@ namespace ScriptableObjects
 {
     [CreateAssetMenu(fileName = "EventData_SO", menuName = "Scriptable Object/Event Data")]
     // ReSharper disable once InconsistentNaming
-    public class EventData_SO : ScriptableObject
+    public class LevelData_SO : ScriptableObject
     {
-        public string currentSceneID;
-        public List<SceneInfo> scenes;
+        public string currentLevelID;
+        public List<LevelID> dayEventSets;
     }
 }

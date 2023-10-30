@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class GameStart : MonoBehaviour
 {
+    public string sceneName;
     private GameObject _player;
     private GameObject _mainCanvas;
     private GameObject _npc;
-    private EventData_SO _eventData;
+    private LevelData_SO _levelData;
 
     private void Awake()
     {
@@ -22,7 +23,7 @@ public class GameStart : MonoBehaviour
         _mainCanvas = Resources.Load<GameObject>("Prefabs/Main Canvas");
         _npc = Resources.Load<GameObject>("Prefabs/NPC");
 
-        _eventData = Resources.Load<EventData_SO>("Data_SO/EventData_SO");
+        _levelData = Resources.Load<LevelData_SO>("Data_SO/EventData_SO");
     }
 
     private void InstantiateObjects()
@@ -42,17 +43,33 @@ public class GameStart : MonoBehaviour
 
     private void InstantiateEventsInScene()
     {
-        foreach (var myScene in _eventData.scenes)
+        LevelID currentDayEvent = null;
+        foreach (var dayEventSet in _levelData.dayEventSets)
         {
-            if (myScene.sceneID.Equals(_eventData.currentSceneID))
-            {
-                SceneInfo currentScene = myScene;
-                foreach (var myEvent in currentScene.events)
-                {   
-                    InstantiateEvent(myEvent.position,myEvent.fileName);
-                }
-            }
-            else Debug.LogError("Can not find this sceneID: " + _eventData.currentSceneID);
+            if (dayEventSet.levelID.Equals(_levelData.currentLevelID))
+                currentDayEvent = dayEventSet;
         }
+
+        if (currentDayEvent == null) return;
+        foreach (var myScene in currentDayEvent.scenes)
+        {
+            if (myScene.sceneName.Equals(sceneName))
+            {
+                // SceneInfo currentScene = myScene;
+                foreach (var myEvent in myScene.events)
+                {
+                    InstantiateEvent(myEvent.position, myEvent.fileName);
+                }
+                ShowEventInformation(currentDayEvent, myScene);
+                return;
+            }
+        }
+        Debug.LogError("Can not find this sceneID: " + sceneName);
+    }
+
+    private void ShowEventInformation(LevelID levelID, SceneInfo sceneInfo)
+    {
+        Debug.Log("LevelID: " + levelID.levelID);
+        Debug.Log("SceneName: " + sceneInfo.sceneName);
     }
 }
