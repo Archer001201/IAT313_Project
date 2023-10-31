@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Reflection;
-using Dialogue;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,13 +5,19 @@ namespace Scenes
 {
     public class Teleport : MonoBehaviour
     {
-        // public DialogueEvent sceneSelection;
-        private void OnTriggerEnter2D(Collider2D other)
+        private void OnEnable()
         {
-            if (other.CompareTag("Player"))
-            {
-                SceneManager.LoadScene("TestScene2");
-            }
+            EventHandler.OnLoadNextScene += HandleTeleport;
+        }
+
+        private void OnDisable()
+        {
+            EventHandler.OnLoadNextScene -= HandleTeleport;
+        }
+
+        private void HandleTeleport(string sceneName)
+        {
+            SceneManager.LoadScene(sceneName);
         }
     }
 }

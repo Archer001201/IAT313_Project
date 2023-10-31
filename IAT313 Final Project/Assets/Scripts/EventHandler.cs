@@ -79,4 +79,18 @@ public static class EventHandler
     {
         OnCostActionPoint?.Invoke();
     }
+
+    public static event Action<string> OnLoadNextScene;
+
+    public static void LoadNextScene(string sceneName)
+    {
+        OnLoadNextScene?.Invoke(sceneName);
+    }
+    
+    public static event Action<string> OnDeliverEventName;
+
+    public static void DeliverEventName(string fileName)
+    {
+        OnDeliverEventName?.Invoke(fileName);
+    }
 }

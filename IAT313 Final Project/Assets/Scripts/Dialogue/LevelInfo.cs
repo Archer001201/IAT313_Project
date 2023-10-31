@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Dialogue
 {
     [Serializable]
-    public class LevelID
+    public class LevelInfo
     {
         public string levelID;
         public List<SceneInfo> scenes;

@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +10,12 @@ namespace Dialogue
     public class DialogueController : MonoBehaviour
     {
         public string jsonFile;
-        
         public bool canTalk;
+        public bool isTeleport;
+        
         private SpriteRenderer _character;
         private PlayerData_SO _playerData;
+        // private LevelData_SO _levelData;
         
         [SerializeField] private TextMeshProUGUI nameText;
         [SerializeField] private DialogueEventSet dialogueEventSet;
@@ -26,18 +27,26 @@ namespace Dialogue
         [SerializeField] private string currentDialogueEventID;
         private int _currentOptionIndex;
 
+        private string _levelId;
+        private string _sceneName;
+        private EventInfo _eventInfoInData;
+
         private void Awake()
         {
-            canTalk = true;
+            _playerData = Resources.Load<PlayerData_SO>("Data_SO/PlayerData_SO");
+            
             currentDialogueEventID = "001";
             LoadJson(jsonFile);
             FillDialogueStack();
-
-            _playerData = Resources.Load<PlayerData_SO>("Data_SO/PlayerData_SO");
-            nameText.color = dialogueEventSet.mainEvent ? new Color(1, 1, 0) : new Color(1, 1, 1);
-            nameText.text = dialogueEventSet.character;
-            _character = GetComponent<SpriteRenderer>();
-            _character.sprite = Resources.Load<Sprite>("Characters/" + dialogueEventSet.character);
+            
+            if (!isTeleport)
+            {
+                if (canTalk) nameText.color = dialogueEventSet.mainEvent ? new Color(1, 1, 0) : new Color(1, 1, 1);
+                else nameText.color = new Color(0.5f,0.5f,0.5f);
+                nameText.text = dialogueEventSet.character;
+                _character = GetComponent<SpriteRenderer>();
+                _character.sprite = Resources.Load<Sprite>("Characters/" + dialogueEventSet.character);
+            }
             this.enabled = false;
         }
 
@@ -64,12 +73,12 @@ namespace Dialogue
         private void Update()
         {
             UpdateOptionHighlight();
-            
         }
 
-        public void InitializeDialogueData(string fileName)
+        public void InitializeDialogueData(string fileName, bool isFinished)
         {
             jsonFile = fileName;
+            canTalk = !isFinished;
         }
 
         private void LoadJson(string fileName)
@@ -125,9 +134,13 @@ namespace Dialogue
                 {
                     _isTalking = false;
                     canTalk = false;
-                    nameText.color = new Color(0.5f,0.5f,0.5f);
-                    if (dialogueEventSet.mainEvent) EventHandler.CostActionPoint();
                     EventHandler.CloseDialoguePanel();
+                    if (!isTeleport)
+                    {
+                        nameText.color = new Color(0.5f,0.5f,0.5f);
+                        EventHandler.DeliverEventName(jsonFile);
+                    }
+                    if (dialogueEventSet.mainEvent) EventHandler.CostActionPoint();
                 }
             }
         }
@@ -144,6 +157,8 @@ namespace Dialogue
         {
             if (_dialogueOptions[_currentOptionIndex].effect != null)
                 EventHandler.AfterEventEffect(_dialogueOptions[_currentOptionIndex].effect);
+            if (isTeleport)
+                EventHandler.LoadNextScene(_dialogueOptions[_currentOptionIndex].optionContent);
             currentDialogueEventID = _dialogueOptions[_currentOptionIndex].nextDialogueEventID;
             _isSelecting = false;
             _isTalking = false;
@@ -152,6 +167,7 @@ namespace Dialogue
             FillDialogueStack();
         }
 
+        // ReSharper disable Unity.PerformanceAnalysis
         private void UpdateOptionHighlight()
         {
             if (_dialogueOptions == null) return;

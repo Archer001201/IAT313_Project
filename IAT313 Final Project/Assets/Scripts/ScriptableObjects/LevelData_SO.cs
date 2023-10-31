@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Dialogue;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace ScriptableObjects
 {
@@ -9,6 +10,6 @@ namespace ScriptableObjects
     public class LevelData_SO : ScriptableObject
     {
         public string currentLevelID;
-        public List<LevelID> dayEventSets;
+        public List<LevelInfo> levels;
     }
 }

@@ -13,26 +13,22 @@ MonoBehaviour:
   m_Name: EventData_SO
   m_EditorClassIdentifier: 
   currentLevelID: 001
-  dayEventSets:
+  levels:
   - levelID: 001
     scenes:
     - sceneName: test1
       events:
-      - fileName: test1
-        position: {x: 1, y: 1, z: 0}
       - fileName: test2
-        position: {x: 2, y: 2, z: 0}
+        position: {x: 1, y: 1, z: 0}
+        isFinished: 1
+      - fileName: test1
+        position: {x: -1, y: -1, z: 0}
+        isFinished: 0
     - sceneName: test2
       events:
       - fileName: test2
+        position: {x: 0, y: 0, z: 0}
+        isFinished: 0
+      - fileName: test1
         position: {x: 2, y: 2, z: 0}
-      - fileName: test2
-        position: {x: 3, y: 1, z: 0}
-      - fileName: test2
-        position: {x: -1, y: -2, z: 0}
-  - levelID: 002
-    scenes:
-    - sceneName: test1
-      events: []
-    - sceneName: test2
-      events: []
+        isFinished: 1

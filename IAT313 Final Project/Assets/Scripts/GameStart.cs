@@ -1,3 +1,4 @@
+using System;
 using Dialogue;
 using ScriptableObjects;
 using Unity.Mathematics;
@@ -10,11 +11,24 @@ public class GameStart : MonoBehaviour
     private GameObject _mainCanvas;
     private GameObject _npc;
     private LevelData_SO _levelData;
+    private string _currentFile;
+    private int _currentLevelIndex;
+    private int _currentSceneIndex;
 
     private void Awake()
     {
         LoadResources();
         InstantiateObjects();
+    }
+
+    private void OnEnable()
+    {
+        EventHandler.OnDeliverEventName += HandleDeliverEventName;
+    }
+
+    private void OnDisable()
+    {
+        EventHandler.OnDeliverEventName -= HandleDeliverEventName;
     }
 
     private void LoadResources()
@@ -34,42 +48,59 @@ public class GameStart : MonoBehaviour
         InstantiateEventsInScene();
     }
 
-    private void InstantiateEvent(Vector3 pos, string fileName)
+    private void InstantiateEvent(Vector3 pos, string fileName, bool isFinished)
     {
         DialogueController dialogueController = _npc.GetComponent<DialogueController>();
-        dialogueController.InitializeDialogueData(fileName);
+        dialogueController.InitializeDialogueData(fileName,isFinished);
         Instantiate(_npc, pos, quaternion.identity);
     }
 
     private void InstantiateEventsInScene()
     {
-        LevelID currentDayEvent = null;
-        foreach (var dayEventSet in _levelData.dayEventSets)
-        {
-            if (dayEventSet.levelID.Equals(_levelData.currentLevelID))
-                currentDayEvent = dayEventSet;
-        }
+        LevelInfo currentLevel = null;
 
-        if (currentDayEvent == null) return;
-        foreach (var myScene in currentDayEvent.scenes)
+        for (int i = 0; i < _levelData.levels.Count; i++)
         {
+            LevelInfo level = _levelData.levels[i];
+            if (!level.levelID.Equals(_levelData.currentLevelID)) continue;
+            currentLevel = level;
+            _currentLevelIndex = i;
+        }
+        
+
+        if (currentLevel == null) return;
+        for (var i = 0; i < currentLevel.scenes.Count; i++)
+        {
+            var myScene = currentLevel.scenes[i];
             if (myScene.sceneName.Equals(sceneName))
             {
-                // SceneInfo currentScene = myScene;
                 foreach (var myEvent in myScene.events)
                 {
-                    InstantiateEvent(myEvent.position, myEvent.fileName);
+                    InstantiateEvent(myEvent.position, myEvent.fileName, myEvent.isFinished);
                 }
-                ShowEventInformation(currentDayEvent, myScene);
+
+                _currentSceneIndex = i;
+                ShowEventInformation(currentLevel, myScene);
                 return;
             }
         }
+
         Debug.LogError("Can not find this sceneID: " + sceneName);
     }
 
-    private void ShowEventInformation(LevelID levelID, SceneInfo sceneInfo)
+    private void ShowEventInformation(LevelInfo levelInfo, SceneInfo sceneInfo)
     {
-        Debug.Log("LevelID: " + levelID.levelID);
+        Debug.Log("LevelID: " + levelInfo.levelID);
         Debug.Log("SceneName: " + sceneInfo.sceneName);
+    }
+
+    private void HandleDeliverEventName(string fileName)
+    {
+        LevelInfo currentLevel = _levelData.levels[_currentLevelIndex];
+        SceneInfo currentScene = currentLevel.scenes[_currentSceneIndex];
+        foreach (var myEvent in currentScene.events)
+        {
+            if (myEvent.fileName.Equals(fileName)) myEvent.isFinished = true;
+        }
     }
 }
