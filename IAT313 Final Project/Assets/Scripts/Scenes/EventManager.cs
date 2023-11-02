@@ -1,12 +1,13 @@
-using System;
 using Dialogue;
 using ScriptableObjects;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class GameStart : MonoBehaviour
+public class EventManager : MonoBehaviour
 {
-    public string sceneName;
+    private Scene _currentScene;
+    private string _sceneName;
     private GameObject _player;
     private GameObject _mainCanvas;
     private GameObject _npc;
@@ -17,6 +18,8 @@ public class GameStart : MonoBehaviour
 
     private void Awake()
     {
+        _currentScene = SceneManager.GetActiveScene();
+        _sceneName = _currentScene.name;
         LoadResources();
         InstantiateObjects();
     }
@@ -72,7 +75,7 @@ public class GameStart : MonoBehaviour
         for (var i = 0; i < currentLevel.scenes.Count; i++)
         {
             var myScene = currentLevel.scenes[i];
-            if (myScene.sceneName.Equals(sceneName))
+            if (myScene.sceneName.Equals(_sceneName))
             {
                 foreach (var myEvent in myScene.events)
                 {
@@ -85,7 +88,7 @@ public class GameStart : MonoBehaviour
             }
         }
 
-        Debug.LogError("Can not find this sceneID: " + sceneName);
+        Debug.LogError("Can not find this sceneID: " + _sceneName);
     }
 
     private void ShowEventInformation(LevelInfo levelInfo, SceneInfo sceneInfo)

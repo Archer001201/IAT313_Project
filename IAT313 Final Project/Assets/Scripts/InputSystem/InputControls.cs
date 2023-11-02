@@ -62,6 +62,15 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""NextLevel"",
+                    ""type"": ""Button"",
+                    ""id"": ""5357a57b-5ded-4431-8b09-d21c13f2ee78"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -339,6 +348,17 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
                     ""action"": ""NavigationDown"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e8d6de4a-8d4d-412e-9ab7-cfe198847366"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NextLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -351,6 +371,7 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
         m_GamePlay_ConfirmButton = m_GamePlay.FindAction("ConfirmButton", throwIfNotFound: true);
         m_GamePlay_NavigationUp = m_GamePlay.FindAction("NavigationUp", throwIfNotFound: true);
         m_GamePlay_NavigationDown = m_GamePlay.FindAction("NavigationDown", throwIfNotFound: true);
+        m_GamePlay_NextLevel = m_GamePlay.FindAction("NextLevel", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -416,6 +437,7 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_GamePlay_ConfirmButton;
     private readonly InputAction m_GamePlay_NavigationUp;
     private readonly InputAction m_GamePlay_NavigationDown;
+    private readonly InputAction m_GamePlay_NextLevel;
     public struct GamePlayActions
     {
         private @InputControls m_Wrapper;
@@ -424,6 +446,7 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
         public InputAction @ConfirmButton => m_Wrapper.m_GamePlay_ConfirmButton;
         public InputAction @NavigationUp => m_Wrapper.m_GamePlay_NavigationUp;
         public InputAction @NavigationDown => m_Wrapper.m_GamePlay_NavigationDown;
+        public InputAction @NextLevel => m_Wrapper.m_GamePlay_NextLevel;
         public InputActionMap Get() { return m_Wrapper.m_GamePlay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -445,6 +468,9 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
             @NavigationDown.started += instance.OnNavigationDown;
             @NavigationDown.performed += instance.OnNavigationDown;
             @NavigationDown.canceled += instance.OnNavigationDown;
+            @NextLevel.started += instance.OnNextLevel;
+            @NextLevel.performed += instance.OnNextLevel;
+            @NextLevel.canceled += instance.OnNextLevel;
         }
 
         private void UnregisterCallbacks(IGamePlayActions instance)
@@ -461,6 +487,9 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
             @NavigationDown.started -= instance.OnNavigationDown;
             @NavigationDown.performed -= instance.OnNavigationDown;
             @NavigationDown.canceled -= instance.OnNavigationDown;
+            @NextLevel.started -= instance.OnNextLevel;
+            @NextLevel.performed -= instance.OnNextLevel;
+            @NextLevel.canceled -= instance.OnNextLevel;
         }
 
         public void RemoveCallbacks(IGamePlayActions instance)
@@ -484,5 +513,6 @@ public partial class @InputControls: IInputActionCollection2, IDisposable
         void OnConfirmButton(InputAction.CallbackContext context);
         void OnNavigationUp(InputAction.CallbackContext context);
         void OnNavigationDown(InputAction.CallbackContext context);
+        void OnNextLevel(InputAction.CallbackContext context);
     }
 }
