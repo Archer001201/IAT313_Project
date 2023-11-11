@@ -3,6 +3,7 @@ using ScriptableObjects;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using Utilities;
 
 namespace Player
 {

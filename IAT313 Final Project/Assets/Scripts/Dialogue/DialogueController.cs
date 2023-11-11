@@ -4,6 +4,7 @@ using System.Linq;
 using ScriptableObjects;
 using TMPro;
 using UnityEngine;
+using Utilities;
 
 namespace Dialogue
 {
@@ -159,6 +160,7 @@ namespace Dialogue
                 EventHandler.AfterEventEffect(_dialogueOptions[_currentOptionIndex].effect);
             if (isTeleport)
                 EventHandler.LoadNextScene(_dialogueOptions[_currentOptionIndex].optionContent);
+            
             currentDialogueEventID = _dialogueOptions[_currentOptionIndex].nextDialogueEventID;
             _isSelecting = false;
             _isTalking = false;

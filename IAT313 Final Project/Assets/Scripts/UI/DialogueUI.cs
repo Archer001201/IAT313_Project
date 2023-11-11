@@ -4,6 +4,7 @@ using Dialogue;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Utilities;
 
 namespace UI
 {

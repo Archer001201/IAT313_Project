@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.PlayerLoop;
+using Utilities;
 
 namespace ScriptableObjects
 {
@@ -6,6 +8,8 @@ namespace ScriptableObjects
     // ReSharper disable once InconsistentNaming
     public class PlayerData_SO : ScriptableObject
     {
+        public float maxValue;
+        public int maxActionPoint;
         public float stress;
         public float love;
         public float study;

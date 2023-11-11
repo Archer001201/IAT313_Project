@@ -1,0 +1,19 @@
+{
+  "summaryID" : "000",
+  "branches" : [
+    {
+      "comment" : "Condition [x,y] -> x: less(0) bigger(1), y: value",
+      "conditionStudy" : [1,2],
+      "conditionLove" : [0,2],
+      "branch" : "text",
+      "nextLevel" : "000"
+    },
+    {
+      "comment" : "Condition [x,y] -> x: less(0) bigger(1), y: value",
+      "conditionStudy" : [0,2],
+      "conditionLove" : [1,2],
+      "branch" : "text",
+      "nextLevel" : "000"
+    }
+  ]
+}

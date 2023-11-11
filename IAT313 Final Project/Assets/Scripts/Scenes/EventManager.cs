@@ -3,6 +3,7 @@ using ScriptableObjects;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Utilities;
 
 public class EventManager : MonoBehaviour
 {
