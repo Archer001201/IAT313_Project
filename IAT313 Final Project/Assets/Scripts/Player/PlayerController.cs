@@ -12,7 +12,6 @@ namespace Player
 
         public float moveSpeed;
         public bool canMove;
-        private static readonly int SpeedX = Animator.StringToHash("speedX");
 
         private void Awake()
         {
@@ -27,7 +26,7 @@ namespace Player
         private void OnEnable()
         {
             _inputControls.Enable();
-            EventHandler.OnOpenDialoguePanel += () => canMove = false;
+            EventHandler.OnOpenDialoguePanel += (x,y) => canMove = false;
             EventHandler.OnCloseDialoguePanel += () => canMove = true;
         }
 
@@ -54,7 +53,6 @@ namespace Player
                 _animator.SetFloat("speedY", velocity.y);
                 _animator.SetFloat("speedX", velocity.x);
             }
-            
         }
     }
 }

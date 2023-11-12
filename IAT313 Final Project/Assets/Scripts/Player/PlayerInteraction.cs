@@ -11,6 +11,7 @@ namespace Player
     {
         private InputControls _inputControls;
         private PlayerData_SO _playerData;
+        [SerializeField] private Animator animator;
         
         public bool canTalk;
         public GameObject interactableSign;
@@ -47,6 +48,7 @@ namespace Player
                 other.GetComponentInParent<DialogueController>().enabled = true;
                 canTalk = other.GetComponentInParent<DialogueController>().canTalk;
                 interactableSign.SetActive(canTalk);
+                // other.GetComponentInParent<DialogueController>().FacePlayer(-animator.GetFloat("speedX"), -animator.GetFloat("speedY"));
             }
         }
 
@@ -62,7 +64,7 @@ namespace Player
 
         private void OpenDialogueCanvas(InputAction.CallbackContext context)
         {
-            if (canTalk) EventHandler.OpenDialoguePanel();
+            if (canTalk) EventHandler.OpenDialoguePanel(animator.GetFloat("speedX"),animator.GetFloat("speedY"));
         }
 
         private void HandleCloseInteractableSign()

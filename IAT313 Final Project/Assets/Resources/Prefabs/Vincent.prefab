@@ -170,7 +170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e9890c0ff8ec430b9644fbcb9ff9f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 7449513151050145341}
   moveSpeed: 3
   canMove: 1
 --- !u!1 &5244573456019118810
@@ -234,6 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fab31cfd514e4d29be1cab28bc443ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 7449513151050145341}
   canTalk: 0
   interactableSign: {fileID: 5244573455986410985}
 --- !u!1001 &3043520031657913875

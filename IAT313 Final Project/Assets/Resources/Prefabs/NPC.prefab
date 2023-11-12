@@ -306,6 +306,7 @@ GameObject:
   - component: {fileID: 4030104477296029914}
   - component: {fileID: 4030104477296029912}
   - component: {fileID: 4030104477296029913}
+  - component: {fileID: 5238594390936330830}
   m_Layer: 0
   m_Name: NPC
   m_TagString: NPC
@@ -422,6 +423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jsonFile: Test
   canTalk: 1
+  isTeleport: 0
   nameText: {fileID: 4030104477044763158}
   dialogueEventSet:
     dialogueEventSetId: 
@@ -429,3 +431,24 @@ MonoBehaviour:
     mainEvent: 0
     dialogueEvents: []
   currentDialogueEventID: 
+--- !u!95 &5238594390936330830
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4030104477296029909}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -5,11 +5,11 @@ namespace Utilities
 {
     public static class EventHandler
     {
-        public static event Action OnOpenDialoguePanel;
+        public static event Action<float, float> OnOpenDialoguePanel;
 
-        public static void OpenDialoguePanel()
+        public static void OpenDialoguePanel(float horizontal, float vertical)
         {
-            OnOpenDialoguePanel?.Invoke();
+            OnOpenDialoguePanel?.Invoke(horizontal, vertical);
         }
 
         public static event Action<DialoguePiece> OnShowDialoguePiece;

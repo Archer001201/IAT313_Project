@@ -15,6 +15,8 @@ namespace Dialogue
         public bool isTeleport;
         
         private SpriteRenderer _character;
+        private Animator _animator;
+        private RuntimeAnimatorController _animatorController;
         private PlayerData_SO _playerData;
         // private LevelData_SO _levelData;
         
@@ -42,11 +44,16 @@ namespace Dialogue
             
             if (!isTeleport)
             {
+                string characterName = dialogueEventSet.character;
                 if (canTalk) nameText.color = dialogueEventSet.mainEvent ? new Color(1, 1, 0) : new Color(1, 1, 1);
                 else nameText.color = new Color(0.5f,0.5f,0.5f);
                 nameText.text = dialogueEventSet.character;
                 _character = GetComponent<SpriteRenderer>();
-                _character.sprite = Resources.Load<Sprite>("Characters/" + dialogueEventSet.character);
+                _character.sprite = Resources.Load<Sprite>("Characters/" + characterName);
+                
+                _animator = GetComponent<Animator>();
+                _animatorController = Resources.Load<RuntimeAnimatorController>("Animation/" + characterName + "/" + characterName + "Anim");
+                _animator.runtimeAnimatorController = _animatorController;
             }
             this.enabled = false;
         }
@@ -181,10 +188,11 @@ namespace Dialogue
             }
         }
         
-        private void HandleOpenDialoguePanel()
+        private void HandleOpenDialoguePanel(float horizontal, float vertical)
         {
             if (_isSelecting && _dialogueOptions != null) SelectionConfirmed();
             if (!_isTalking && _dialogueStack != null) StartCoroutine(DialogueRoutine());
+            FacePlayer(horizontal,vertical);
         }
 
         private void HandleNavigationUp()
@@ -195,6 +203,15 @@ namespace Dialogue
         private void HandleNavigationDown()
         {
             if (_isSelecting && _currentOptionIndex < _dialogueOptions.Length-1) _currentOptionIndex++;
+        }
+
+        private void FacePlayer(float horizontal, float vertical)
+        {
+            if (_animator != null && _animator.runtimeAnimatorController != null)
+            {
+                _animator.SetFloat("horizontal", -horizontal);
+                _animator.SetFloat("vertical", -vertical);
+            }
         }
     }
 }
