@@ -15,7 +15,9 @@ namespace Player
         
         public bool canTalk;
         public GameObject interactableSign;
-        
+        private static readonly int SpeedX = Animator.StringToHash("speedX");
+        private static readonly int SpeedY = Animator.StringToHash("speedY");
+
         private void Awake()
         {
             _playerData = Resources.Load<PlayerData_SO>("Data_SO/PlayerData_SO");
@@ -48,7 +50,6 @@ namespace Player
                 other.GetComponentInParent<DialogueController>().enabled = true;
                 canTalk = other.GetComponentInParent<DialogueController>().canTalk;
                 interactableSign.SetActive(canTalk);
-                // other.GetComponentInParent<DialogueController>().FacePlayer(-animator.GetFloat("speedX"), -animator.GetFloat("speedY"));
             }
         }
 
@@ -64,7 +65,7 @@ namespace Player
 
         private void OpenDialogueCanvas(InputAction.CallbackContext context)
         {
-            if (canTalk) EventHandler.OpenDialoguePanel(animator.GetFloat("speedX"),animator.GetFloat("speedY"));
+            if (canTalk) EventHandler.OpenDialoguePanel(animator.GetFloat(SpeedX),animator.GetFloat(SpeedY));
         }
 
         private void HandleCloseInteractableSign()

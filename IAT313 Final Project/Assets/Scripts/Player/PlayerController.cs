@@ -12,6 +12,9 @@ namespace Player
 
         public float moveSpeed;
         public bool canMove;
+        private static readonly int IsMoving = Animator.StringToHash("isMoving");
+        private static readonly int SpeedY = Animator.StringToHash("speedY");
+        private static readonly int SpeedX = Animator.StringToHash("speedX");
 
         private void Awake()
         {
@@ -46,12 +49,12 @@ namespace Player
             _rb.velocity = velocity;
 
             bool isMoving = velocity.x != 0 || velocity.y != 0;
-            _animator.SetBool("isMoving", isMoving);
+            _animator.SetBool(IsMoving, isMoving);
 
             if (isMoving)
             {
-                _animator.SetFloat("speedY", velocity.y);
-                _animator.SetFloat("speedX", velocity.x);
+                _animator.SetFloat(SpeedY, velocity.y);
+                _animator.SetFloat(SpeedX, velocity.x);
             }
         }
     }

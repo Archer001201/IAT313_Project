@@ -18,7 +18,6 @@ namespace Dialogue
         private Animator _animator;
         private RuntimeAnimatorController _animatorController;
         private PlayerData_SO _playerData;
-        // private LevelData_SO _levelData;
         
         [SerializeField] private TextMeshProUGUI nameText;
         [SerializeField] private DialogueEventSet dialogueEventSet;
@@ -33,6 +32,11 @@ namespace Dialogue
         private string _levelId;
         private string _sceneName;
         private EventInfo _eventInfoInData;
+        private static readonly int Horizontal = Animator.StringToHash("horizontal");
+        private static readonly int Vertical = Animator.StringToHash("vertical");
+        // private bool _isAnimatorNotNull;
+        // private bool _isRuntimeAnimatorControllerNotNull;
+        private bool _hasAnimatorController;
 
         private void Awake()
         {
@@ -54,6 +58,9 @@ namespace Dialogue
                 _animator = GetComponent<Animator>();
                 _animatorController = Resources.Load<RuntimeAnimatorController>("Animation/" + characterName + "/" + characterName + "Anim");
                 _animator.runtimeAnimatorController = _animatorController;
+                // _isAnimatorNotNull = _animator != null;
+                // _isRuntimeAnimatorControllerNotNull = _animator.runtimeAnimatorController != null;
+                _hasAnimatorController = _animator != null && _animator.runtimeAnimatorController != null;
             }
             this.enabled = false;
         }
@@ -81,6 +88,10 @@ namespace Dialogue
         private void Update()
         {
             UpdateOptionHighlight();
+            
+            if (_hasAnimatorController && !canTalk && 
+                (_animator.GetFloat(Horizontal) != 0 || _animator.GetFloat(Vertical) != 0)) 
+                FacePlayer(0,0);
         }
 
         public void InitializeDialogueData(string fileName, bool isFinished)
@@ -142,6 +153,7 @@ namespace Dialogue
                 {
                     _isTalking = false;
                     canTalk = false;
+                    
                     EventHandler.CloseDialoguePanel();
                     if (!isTeleport)
                     {
@@ -207,11 +219,9 @@ namespace Dialogue
 
         private void FacePlayer(float horizontal, float vertical)
         {
-            if (_animator != null && _animator.runtimeAnimatorController != null)
-            {
-                _animator.SetFloat("horizontal", -horizontal);
-                _animator.SetFloat("vertical", -vertical);
-            }
+            if (!_hasAnimatorController) return;
+            _animator.SetFloat(Horizontal, -horizontal);
+            _animator.SetFloat(Vertical, -vertical);
         }
     }
 }
