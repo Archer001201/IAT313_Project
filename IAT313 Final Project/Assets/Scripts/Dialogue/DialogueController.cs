@@ -40,7 +40,7 @@ namespace Dialogue
         {
             _playerData = Resources.Load<PlayerData_SO>("Data_SO/PlayerData_SO");
             
-            currentDialogueEventID = "001";
+            currentDialogueEventID = "D001";
             LoadJson(jsonFile);
             FillDialogueStack();
             

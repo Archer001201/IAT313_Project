@@ -12,43 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5de5fc61284c46a59b06f69c9e7585c, type: 3}
   m_Name: EventData_SO
   m_EditorClassIdentifier: 
-  currentLevelID: 001
+  currentLevelID: L001
   levels:
-  - levelID: 001
+  - levelID: L001
     scenes:
-    - sceneName: TestScene1
+    - sceneName: Home
       events:
-      - fileName: test2
+      - fileName: E001
         position: {x: 1, y: 1, z: 0}
-        isFinished: 0
-      - fileName: test1
-        position: {x: -1, y: -1, z: 0}
-        isFinished: 0
-    - sceneName: TestScene2
-      events:
-      - fileName: test2
-        position: {x: 0, y: 0, z: 0}
-        isFinished: 0
-      - fileName: test1
-        position: {x: 2, y: 2, z: 0}
-        isFinished: 0
-    summaryFile: summaryTest
-  - levelID: 002
-    scenes:
-    - sceneName: TestScene1
-      events:
-      - fileName: test2
-        position: {x: 0, y: 0, z: 0}
         isFinished: 1
-      - fileName: test1
-        position: {x: -3, y: -3, z: 0}
-        isFinished: 0
-    - sceneName: TestScene2
-      events:
-      - fileName: test2
-        position: {x: 0, y: 0, z: 0}
-        isFinished: 0
-      - fileName: test1
-        position: {x: 2, y: 2, z: 0}
-        isFinished: 0
-    summaryFile: summaryTest
+      npcs:
+      - npcName: Mom
+        position: {x: 0, y: 1}
+    - sceneName: Classroom
+      events: []
+      npcs: []
+    - sceneName: Office
+      events: []
+      npcs: []
+    - sceneName: Playground
+      events: []
+      npcs: []
+    - sceneName: Library
+      events: []
+      npcs: []
+    - sceneName: Hallway
+      events: []
+      npcs: []
+    summaryFile: 

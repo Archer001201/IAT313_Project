@@ -20,6 +20,7 @@ namespace Player
 
         private void Awake()
         {
+            interactableSign.SetActive(false);
             _playerData = Resources.Load<PlayerData_SO>("Data_SO/PlayerData_SO");
             _inputControls = new InputControls();
             _inputControls.GamePlay.ConfirmButton.performed += OpenDialogueCanvas;

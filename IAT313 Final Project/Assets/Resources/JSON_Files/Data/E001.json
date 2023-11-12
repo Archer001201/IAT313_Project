@@ -1,0 +1,33 @@
+{
+  "dialogueEventSetID" : "E001",
+  "character" : "Dad",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "(Today is the 100th day left to the entrance exam and I must try my best!)"
+        },
+
+        {
+          "name" : "Dad",
+          "content" : "Our dreams weave through your path, Vincent. We know you’ll forge the way with your success."
+        },
+
+        {
+          "name" : "Mom",
+          "content" : "Keep your eyes on the prize, Vincent. Don't let fleeting moments derail your journey."
+        },
+        {
+          "name" : "Mom",
+          "content" : "Your destiny hinges on the college entrance examination, and it's not just your fate but also the fate of our entire family."
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

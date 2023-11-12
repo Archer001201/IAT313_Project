@@ -12,6 +12,7 @@ public class EventManager : MonoBehaviour
     private GameObject _player;
     private GameObject _mainCanvas;
     private GameObject _npc;
+    private GameObject _dummy;
     private LevelData_SO _levelData;
     private string _currentFile;
     private int _currentLevelIndex;
@@ -40,7 +41,7 @@ public class EventManager : MonoBehaviour
         _player = Resources.Load<GameObject>("Prefabs/Vincent");
         _mainCanvas = Resources.Load<GameObject>("Prefabs/Main Canvas");
         _npc = Resources.Load<GameObject>("Prefabs/NPC");
-
+        _dummy = Resources.Load<GameObject>("Prefabs/Dummy");
         _levelData = Resources.Load<LevelData_SO>("Data_SO/EventData_SO");
     }
 
@@ -81,6 +82,12 @@ public class EventManager : MonoBehaviour
                 foreach (var myEvent in myScene.events)
                 {
                     InstantiateEvent(myEvent.position, myEvent.fileName, myEvent.isFinished);
+                }
+
+                foreach (var npcInfo in myScene.npcs)
+                {
+                    var dummy = Instantiate<GameObject>(_dummy, npcInfo.position, quaternion.identity);
+                    dummy.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Characters/" + npcInfo.npcName);
                 }
 
                 _currentSceneIndex = i;
