@@ -19,9 +19,11 @@ namespace ScriptableObjects
         {
             EventHandler.OnAfterEventEffect += floats =>
             {
+                int delta = 0;
+                if (stress > maxValue * 0.7 || stress < maxValue*0.3) delta = -1;
                 stress += floats[0];
-                love += floats[1];
-                study += floats[2];
+                love += floats[1] + delta;
+                study += floats[2] + delta;
             };
         }
     }

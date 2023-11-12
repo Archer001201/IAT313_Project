@@ -20,7 +20,7 @@ MonoBehaviour:
       events:
       - fileName: test2
         position: {x: 1, y: 1, z: 0}
-        isFinished: 1
+        isFinished: 0
       - fileName: test1
         position: {x: -1, y: -1, z: 0}
         isFinished: 0
@@ -39,7 +39,7 @@ MonoBehaviour:
       events:
       - fileName: test2
         position: {x: 0, y: 0, z: 0}
-        isFinished: 0
+        isFinished: 1
       - fileName: test1
         position: {x: -3, y: -3, z: 0}
         isFinished: 0
