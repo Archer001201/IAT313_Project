@@ -1,6 +1,6 @@
 {
   "dialogueEventSetID" : "000",
-  "character" : "Vincent",
+  "character" : "Teacher",
   "mainEvent" : true,
   "dialogueEvents" : [
     {

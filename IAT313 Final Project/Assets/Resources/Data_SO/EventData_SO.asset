@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5de5fc61284c46a59b06f69c9e7585c, type: 3}
   m_Name: EventData_SO
   m_EditorClassIdentifier: 
-  currentLevelID: 002
+  currentLevelID: 001
   levels:
   - levelID: 001
     scenes:

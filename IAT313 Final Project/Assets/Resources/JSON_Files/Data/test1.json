@@ -1,6 +1,6 @@
 {
   "dialogueEventSetID" : "000",
-  "character" : "Yvonne",
+  "character" : "Dad",
   "mainEvent" : false,
   "dialogueEvents" : [
     {
@@ -25,7 +25,7 @@
 
       "options" : [
         {
-          "optionContent" : "option A",
+          "optionContent" : "Agree",
           "nextDialogueEventID" : "002A"
         },
 
@@ -42,8 +42,8 @@
 
       "dialogues" : [
         {
-          "name" : "Vincent",
-          "content" : "This is 002A"
+          "name" : "Mom",
+          "content" : "I agree with you"
         },
 
         {

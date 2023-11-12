@@ -34,8 +34,6 @@ namespace Dialogue
         private EventInfo _eventInfoInData;
         private static readonly int Horizontal = Animator.StringToHash("horizontal");
         private static readonly int Vertical = Animator.StringToHash("vertical");
-        // private bool _isAnimatorNotNull;
-        // private bool _isRuntimeAnimatorControllerNotNull;
         private bool _hasAnimatorController;
 
         private void Awake()
@@ -56,10 +54,8 @@ namespace Dialogue
                 _character.sprite = Resources.Load<Sprite>("Characters/" + characterName);
                 
                 _animator = GetComponent<Animator>();
-                _animatorController = Resources.Load<RuntimeAnimatorController>("Animation/" + characterName + "/" + characterName + "Anim");
+                _animatorController = Resources.Load<RuntimeAnimatorController>("Animation/" + characterName + "/" + characterName);
                 _animator.runtimeAnimatorController = _animatorController;
-                // _isAnimatorNotNull = _animator != null;
-                // _isRuntimeAnimatorControllerNotNull = _animator.runtimeAnimatorController != null;
                 _hasAnimatorController = _animator != null && _animator.runtimeAnimatorController != null;
             }
             this.enabled = false;
