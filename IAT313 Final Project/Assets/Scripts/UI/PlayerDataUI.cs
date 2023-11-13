@@ -1,6 +1,8 @@
 using System;
 using ScriptableObjects;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using EventHandler = Utilities.EventHandler;
 
@@ -15,6 +17,7 @@ namespace UI
         [SerializeField] private Image studyFill;
         [SerializeField] private GameObject actionBar;
         [SerializeField] private GameObject endLevelPanel;
+        [SerializeField] private TextMeshProUGUI sceneName;
 
         private GameObject _actionIcon;
         
@@ -40,6 +43,11 @@ namespace UI
         private void OnDisable()
         {
             EventHandler.OnCostActionPoint -= HandleCostActionPoint;
+        }
+
+        private void Start()
+        {
+            sceneName.text = SceneManager.GetActiveScene().name;
         }
 
         private void Update()
