@@ -46,7 +46,8 @@ MonoBehaviour:
     - sceneName: Library
       events: []
       npcs: []
-      teleportFiles: []
+      teleportFiles:
+      - TP_LBRY001
     - sceneName: Hallway
       events: []
       npcs: []

@@ -2973,9 +2973,9 @@ TextureImporter:
       name: Fulltilemap 1_71
       rect:
         serializedVersion: 2
-        x: 288
+        x: 352
         y: 154
-        width: 192
+        width: 64
         height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -3419,7 +3419,7 @@ TextureImporter:
         width: 63
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3440,7 +3440,7 @@ TextureImporter:
         width: 18
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3461,7 +3461,7 @@ TextureImporter:
         width: 24
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3482,7 +3482,7 @@ TextureImporter:
         width: 16
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3503,7 +3503,7 @@ TextureImporter:
         width: 25
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3524,7 +3524,7 @@ TextureImporter:
         width: 25
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3532,6 +3532,27 @@ TextureImporter:
       bones: []
       spriteID: 55473cead4a8e45e8b57af81a96522c1
       internalID: 1731498974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fulltilemap 1_98
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 154
+        width: 64
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3aaa69f75af84fb596a862224c50e2e
+      internalID: 569683402
       vertices: []
       indices: 
       edges: []
@@ -3645,6 +3666,7 @@ TextureImporter:
       Fulltilemap 1_95: 1024023455
       Fulltilemap 1_96: -2082226738
       Fulltilemap 1_97: 1731498974
+      Fulltilemap 1_98: 569683402
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
