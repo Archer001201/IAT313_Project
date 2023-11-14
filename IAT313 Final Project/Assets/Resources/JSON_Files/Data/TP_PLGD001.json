@@ -1,0 +1,28 @@
+{
+  "dialogueEventSetID" : "TP_PLGD001",
+  "character" : "",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "",
+          "content" : "Where to go?"
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "Hallway",
+          "nextDialogueEventID" : ""
+        },
+        {
+          "optionContent" : "Library",
+          "nextDialogueEventID" : ""
+        }
+      ]
+    }
+  ]
+}

@@ -42,7 +42,8 @@ MonoBehaviour:
     - sceneName: Playground
       events: []
       npcs: []
-      teleportFiles: []
+      teleportFiles:
+      - TP_PLGD001
     - sceneName: Library
       events: []
       npcs: []
