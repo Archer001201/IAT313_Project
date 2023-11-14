@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d1ce31e51568464f8909cc9d689cba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teleport: {fileID: 1797098193}
 --- !u!4 &371235109
 Transform:
   m_ObjectHideFlags: 0
@@ -300,6 +301,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6529fec170b84e97b7d7f0dbc305ee0, type: 3}
+--- !u!1 &1797098193 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5520952818285554802, guid: f6529fec170b84e97b7d7f0dbc305ee0, type: 3}
+  m_PrefabInstance: {fileID: 1797098192}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1816303667
 GameObject:
   m_ObjectHideFlags: 0
