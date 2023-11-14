@@ -1484,11 +1484,11 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 423
+        width: 246
         height: 553
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 163, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -2513,8 +2513,8 @@ TextureImporter:
         serializedVersion: 2
         x: 288
         y: 285
-        width: 160
-        height: 66
+        width: 96
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3410,6 +3410,132 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Fulltilemap 1_92
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 288
+        width: 63
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c399c0d54702e47e89f832e557cd2a1f
+      internalID: -1371489803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fulltilemap 1_93
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 302
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146076ec6b6d3416fb43be5593e9f144
+      internalID: -901631943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fulltilemap 1_94
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 212
+        width: 24
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c60cacec0d347b38910851ed42e1e1
+      internalID: -1384808255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fulltilemap 1_95
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 149
+        width: 16
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc075bfc2feff4c2386afac23378a678
+      internalID: 1024023455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fulltilemap 1_96
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 192
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd81387d37e6743778f83ea3a046d433
+      internalID: -2082226738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fulltilemap 1_97
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 224
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55473cead4a8e45e8b57af81a96522c1
+      internalID: 1731498974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -3513,6 +3639,12 @@ TextureImporter:
       Fulltilemap 1_9: 1838729516
       Fulltilemap 1_90: 1919195568
       Fulltilemap 1_91: 689700404
+      Fulltilemap 1_92: -1371489803
+      Fulltilemap 1_93: -901631943
+      Fulltilemap 1_94: -1384808255
+      Fulltilemap 1_95: 1024023455
+      Fulltilemap 1_96: -2082226738
+      Fulltilemap 1_97: 1731498974
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

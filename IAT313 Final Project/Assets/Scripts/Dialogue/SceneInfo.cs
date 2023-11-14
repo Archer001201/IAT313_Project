@@ -9,6 +9,6 @@ namespace Dialogue
         public string sceneName;
         public List<EventInfo> events;
         public List<NpcInfo> npcs;
-        public string teleportFile;
+        public List<string> teleportFiles;
     }
 }

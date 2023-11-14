@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Dialogue;
 using ScriptableObjects;
 using Unity.Mathematics;
@@ -20,7 +21,7 @@ namespace Scenes
         private int _currentLevelIndex;
         private int _currentSceneIndex;
 
-        [SerializeField] private GameObject teleport;
+        [SerializeField] private List<GameObject> teleports;
 
         private void Awake()
         {
@@ -94,7 +95,11 @@ namespace Scenes
                         dummy.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Characters/" + npcInfo.npcName);
                     }
                     
-                    teleport.GetComponent<DialogueController>().jsonFile = myScene.teleportFile;
+                    // teleport.GetComponent<DialogueController>().jsonFile = myScene.teleportFile;
+                    for (var j=0; j<teleports.Count; j++)
+                    {
+                        teleports[j].GetComponent<DialogueController>().jsonFile = myScene.teleportFiles[j];
+                    }
                     
                     _currentSceneIndex = i;
                     ShowEventInformation(currentLevel, myScene);

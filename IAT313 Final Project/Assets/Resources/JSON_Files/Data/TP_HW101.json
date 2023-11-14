@@ -1,5 +1,5 @@
 {
-  "dialogueEventSetID" : "TP001",
+  "dialogueEventSetID" : "TP_HW101",
   "character" : "",
   "mainEvent" : false,
   "dialogueEvents" : [
@@ -9,13 +9,13 @@
       "dialogues" : [
         {
           "name" : "",
-          "content" : "Today marks 100 days until the College Entrance Exam. I need to work hard to get into my dream university."
+          "content" : "Where to go?"
         }
       ],
 
       "options" : [
         {
-          "optionContent" : "Hallway",
+          "optionContent" : "Classroom",
           "nextDialogueEventID" : ""
         }
       ]

@@ -1,0 +1,24 @@
+{
+  "dialogueEventSetID" : "TP_HM001",
+  "character" : "",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "",
+          "content" : "Where to go?"
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "Classroom",
+          "nextDialogueEventID" : ""
+        }
+      ]
+    }
+  ]
+}
