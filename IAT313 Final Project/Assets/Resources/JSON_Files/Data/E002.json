@@ -1,0 +1,41 @@
+{
+  "dialogueEventSetID" : "E002",
+  "character" : "Teacher",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "Good morning Andrew, I really can't figure out how to solve these two problems, I need your help!"
+        },
+
+        {
+          "name" : "Teacher",
+          "content" : "Good morning Vincent, I would love to be of assistance to you, but there happens to be a more important thing to tell you right now."
+        },
+
+        {
+          "name" : "Teacher",
+          "content" : "This is Yvonne beside me, our new transfer student, I'll let her sit next to you in a while, so you can get acquainted first."
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "Hello, I'm Yvonne. Nice to meet you. "
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Hello, Yvonne, I'm Vincent. Feel free to ask me anything you'd like to know about the school anytime! "
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Of course, academic questions are also welcome! "
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

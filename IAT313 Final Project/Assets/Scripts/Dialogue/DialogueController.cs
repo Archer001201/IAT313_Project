@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using ScriptableObjects;
 using TMPro;
 using UnityEngine;
-using Utilities;
+using EventHandler = Utilities.EventHandler;
 
 namespace Dialogue
 {
@@ -31,7 +32,7 @@ namespace Dialogue
 
         private string _levelId;
         private string _sceneName;
-        private EventInfo _eventInfoInData;
+        // private EventInfo _eventInfoInData;
         private static readonly int Horizontal = Animator.StringToHash("horizontal");
         private static readonly int Vertical = Animator.StringToHash("vertical");
         private bool _hasAnimatorController;
@@ -41,11 +42,11 @@ namespace Dialogue
             _playerData = Resources.Load<PlayerData_SO>("Data_SO/PlayerData_SO");
             
             currentDialogueEventID = "D001";
-            LoadJson(jsonFile);
-            FillDialogueStack();
             
             if (!isTeleport)
             {
+                LoadJson(jsonFile);
+                FillDialogueStack();
                 string characterName = dialogueEventSet.character;
                 if (canTalk) nameText.color = dialogueEventSet.mainEvent ? new Color(1, 1, 0) : new Color(1, 1, 1);
                 else nameText.color = new Color(0.5f,0.5f,0.5f);
@@ -79,6 +80,13 @@ namespace Dialogue
 
             EventHandler.OnNavigationUp -= HandleNavigationUp;
             EventHandler.OnNavigationDown -= HandleNavigationDown;
+        }
+
+        private void Start()
+        {
+            if (!isTeleport) return;
+            LoadJson(jsonFile);
+            FillDialogueStack();
         }
 
         private void Update()
@@ -171,10 +179,9 @@ namespace Dialogue
 
         private void SelectionConfirmed()
         {
+            var nextSceneName = _dialogueOptions[_currentOptionIndex].optionContent;
             if (_dialogueOptions[_currentOptionIndex].effect != null)
                 EventHandler.AfterEventEffect(_dialogueOptions[_currentOptionIndex].effect);
-            if (isTeleport)
-                EventHandler.LoadNextScene(_dialogueOptions[_currentOptionIndex].optionContent);
             
             currentDialogueEventID = _dialogueOptions[_currentOptionIndex].nextDialogueEventID;
             _isSelecting = false;
@@ -182,6 +189,9 @@ namespace Dialogue
             _dialogueOptions = null;
             EventHandler.DestroyOptions();
             FillDialogueStack();
+            
+            if (isTeleport)
+                EventHandler.LoadNextScene(nextSceneName);
         }
 
         // ReSharper disable Unity.PerformanceAnalysis

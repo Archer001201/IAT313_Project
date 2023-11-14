@@ -43,6 +43,9 @@ TagManager:
   - name: Tilemap
     uniqueID: 4025398005
     locked: 0
+  - name: Furniture
+    uniqueID: 531532799
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

@@ -4,23 +4,18 @@
   "mainEvent" : false,
   "dialogueEvents" : [
     {
-      "dialogueEventID" : "001",
+      "dialogueEventID" : "D001",
 
       "dialogues" : [
         {
           "name" : "",
-          "content" : "Where to go?"
+          "content" : "Today marks 100 days until the College Entrance Exam. I need to work hard to get into my dream university."
         }
       ],
 
       "options" : [
         {
           "optionContent" : "Home",
-          "nextDialogueEventID" : ""
-        },
-
-        {
-          "optionContent" : "testScene3",
           "nextDialogueEventID" : ""
         }
       ]

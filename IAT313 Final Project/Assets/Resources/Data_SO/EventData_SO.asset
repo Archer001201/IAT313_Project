@@ -20,23 +20,32 @@ MonoBehaviour:
       events:
       - fileName: E001
         position: {x: 1, y: 1, z: 0}
-        isFinished: 0
+        isFinished: 1
       npcs:
       - npcName: Mom
         position: {x: 0, y: 1}
+      teleportFile: TP001
     - sceneName: Classroom
       events: []
       npcs: []
+      teleportFile: 
     - sceneName: Office
-      events: []
+      events:
+      - fileName: E002
+        position: {x: 0, y: 0, z: 0}
+        isFinished: 1
       npcs: []
+      teleportFile: TP002
     - sceneName: Playground
       events: []
       npcs: []
+      teleportFile: 
     - sceneName: Library
       events: []
       npcs: []
+      teleportFile: 
     - sceneName: Hallway
       events: []
       npcs: []
+      teleportFile: 
     summaryFile: 

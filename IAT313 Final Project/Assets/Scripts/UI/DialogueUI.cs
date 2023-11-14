@@ -55,7 +55,7 @@ namespace UI
 
         private void UpdateDialoguePanel(DialoguePiece piece)
         {
-            dialoguePanel.SetActive(true);
+            // dialoguePanel.SetActive(true);
             StartCoroutine(UpdateDialoguePanelRoutine(piece));
         }
 

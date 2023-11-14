@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5520952818285554801}
   - component: {fileID: 5520952818285554800}
   - component: {fileID: 5520952818285554803}
-  - component: {fileID: 5520952818285554815}
+  - component: {fileID: 2096639372}
   m_Layer: 0
   m_Name: Teleport
   m_TagString: InteroperableObject
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c27cc4a0408c4720b57a6f6ce9a2b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5520952818285554815
+--- !u!114 &2096639372
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42ec3ea77baf43daa23d5b9b9d426b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jsonFile: tptest2
+  jsonFile: tptest1
   canTalk: 1
   isTeleport: 1
   nameText: {fileID: 0}

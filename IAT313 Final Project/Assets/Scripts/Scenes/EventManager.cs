@@ -20,6 +20,8 @@ namespace Scenes
         private int _currentLevelIndex;
         private int _currentSceneIndex;
 
+        [SerializeField] private GameObject teleport;
+
         private void Awake()
         {
             _currentScene = SceneManager.GetActiveScene();
@@ -91,7 +93,9 @@ namespace Scenes
                         var dummy = Instantiate<GameObject>(_dummy, npcInfo.position, quaternion.identity);
                         dummy.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Characters/" + npcInfo.npcName);
                     }
-
+                    
+                    teleport.GetComponent<DialogueController>().jsonFile = myScene.teleportFile;
+                    
                     _currentSceneIndex = i;
                     ShowEventInformation(currentLevel, myScene);
                     return;
@@ -109,8 +113,8 @@ namespace Scenes
 
         private void HandleDeliverEventName(string fileName)
         {
-            LevelInfo currentLevel = _levelData.levels[_currentLevelIndex];
-            SceneInfo currentScene = currentLevel.scenes[_currentSceneIndex];
+            var currentLevel = _levelData.levels[_currentLevelIndex];
+            var currentScene = currentLevel.scenes[_currentSceneIndex];
             foreach (var myEvent in currentScene.events)
             {
                 if (myEvent.fileName.Equals(fileName)) myEvent.isFinished = true;
