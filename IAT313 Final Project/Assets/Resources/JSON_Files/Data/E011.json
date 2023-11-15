@@ -1,0 +1,23 @@
+{
+  "dialogueEventSetID" : "E011",
+  "character" : "ClassmateB",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "ClassmateB",
+          "content" : "It's almost time for class, Vincent. I haven't done my homework. Can you let me copy yours?"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "If you are having trouble with the assignment, I can help you understand the topic or offer some advice, but I can't copy it for you."
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

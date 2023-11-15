@@ -1,0 +1,23 @@
+{
+  "dialogueEventSetID" : "E001",
+  "character" : "ClassmateA",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "ClassmateA",
+          "content" : "Isn't that Vincent? You've already built a good relationship with the new female student so quickly?"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "The new student needs our attention! She's having trouble with a few math problems, and I'm going to help her."
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

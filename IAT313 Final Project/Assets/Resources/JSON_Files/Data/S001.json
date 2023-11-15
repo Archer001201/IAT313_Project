@@ -1,0 +1,12 @@
+{
+  "summaryID" : "S001",
+  "branches" : [
+    {
+      "comment" : "Condition [x,y] -> x: less(0) bigger(1), y: value",
+      "conditionStudy" : [1,0],
+      "conditionLove" : [1,0],
+      "branch" : "With Vincent's companionship, Yvonne gradually familiarized herself with the school environment, experiencing the warm campus atmosphere. Simultaneously, she demonstrated a proactive attitude towards her studies, actively seeking Vincent's help on academic matters. This supportive atmosphere not only deepened the friendship between the two but also created a positive learning space for them to face academic challenges together. This second scenario marked a beneficial beginning for the two students to collaborate and grow together in the new semester.",
+      "nextLevel" : "L002"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "dialogueEventSetID" : "E008",
+  "character" : "Teacher",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "Teacher",
+          "content" : "Vincent, these exams are a path, not destiny. Don’t drown in them."
+        },
+        {
+          "name" : "Teacher",
+          "content" : "Relax, you'll be fine."
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

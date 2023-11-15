@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5de5fc61284c46a59b06f69c9e7585c, type: 3}
   m_Name: EventData_SO
   m_EditorClassIdentifier: 
-  currentLevelID: L002
+  currentLevelID: L001
   levels:
   - levelID: L001
     scenes:
@@ -70,7 +70,7 @@ MonoBehaviour:
       - TP_HW101
       - TP_HW202
       - TP_HW301
-    summaryFile: summaryTest
+    summaryFile: S001
   - levelID: L002
     scenes:
     - sceneName: Home

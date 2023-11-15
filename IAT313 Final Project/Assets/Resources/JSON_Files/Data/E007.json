@@ -1,0 +1,41 @@
+{
+  "dialogueEventSetID" : "E007",
+  "character" : "Dad",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "Dad",
+          "content" : "Vincent, your mother and I have been talking about your upcoming exams…"
+        },
+
+        {
+          "name" : "Dad",
+          "content" : "...We believe in you, son. We know you’re doing your best."
+        },
+
+        {
+          "name" : "Mom",
+          "content" : "Belief without results is meaningless, Richard."
+        },
+        {
+          "name" : "Mom",
+          "content" : "Vincent, we have sacrificed everything to give you these opportunities. It is your duty to ensure that it was not for nothing. We expect you to succeed."
+        },
+        {
+          "name" : "Vincent",
+          "content" : "I understand, Mom. I won’t let you down."
+        },
+        {
+          "name" : "Dad",
+          "content" : "Vincent, we want you to remember that no matter what happens, you are our son, and we will always love you."
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}
