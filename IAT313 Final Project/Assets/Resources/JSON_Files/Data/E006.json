@@ -1,0 +1,29 @@
+{
+  "dialogueEventSetID" : "E006",
+  "character" : "ClassmateA",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "ClassmateA",
+          "content" : "There's an unfamiliar girl in Mr. Anderson's office."
+        },
+
+        {
+          "name" : "Vincent",
+          "content" : "An unfamiliar girl?"
+        },
+
+        {
+          "name" : "ClassmateB",
+          "content" : "She seems to be a new transfer student. She'll probably be assigned to our class, I guess."
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "dialogueEventSetID" : "TP_HM001",
+  "dialogueEventSetID" : "TP_CLSR001",
   "character" : "",
   "mainEvent" : false,
   "dialogueEvents" : [
@@ -9,17 +9,13 @@
       "dialogues" : [
         {
           "name" : "",
-          "content" : "Where to go?"
+          "content" : "Last night, there were a few math problems I simply couldn't solve. I need to go ask Mr. Anderson for help."
         }
       ],
 
       "options" : [
         {
-          "optionContent" : "Classroom",
-          "nextDialogueEventID" : ""
-        },
-        {
-          "optionContent" : "Cancel",
+          "optionContent" : "Hallway",
           "nextDialogueEventID" : ""
         }
       ]

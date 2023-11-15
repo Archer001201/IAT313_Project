@@ -1,5 +1,5 @@
 {
-  "dialogueEventSetID" : "TP_HM001",
+  "dialogueEventSetID" : "TP_HW2001",
   "character" : "",
   "mainEvent" : false,
   "dialogueEvents" : [
@@ -9,13 +9,13 @@
       "dialogues" : [
         {
           "name" : "",
-          "content" : "Where to go?"
+          "content" : "Through the window on the office door, you can see a beautiful girl standing next to Mr. Anderson."
         }
       ],
 
       "options" : [
         {
-          "optionContent" : "Classroom",
+          "optionContent" : "Office",
           "nextDialogueEventID" : ""
         },
         {

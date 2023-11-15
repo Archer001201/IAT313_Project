@@ -113,7 +113,7 @@ namespace Dialogue
         {
             if (!_isFinished) return;
             Debug.Log("Next Level ID:" + _nextLevelID);
-            SceneManager.LoadScene("TestScene1");
+            SceneManager.LoadScene("Home");
             levelData.currentLevelID = _nextLevelID;
             playerData.actionPoint += 3;
         }

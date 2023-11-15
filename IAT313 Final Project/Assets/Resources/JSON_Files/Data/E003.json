@@ -1,0 +1,37 @@
+{
+  "dialogueEventSetID" : "E003",
+  "character" : "ClassmateC",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "",
+          "content" : "Today, I'll go to the library to read for a while, and then I'll head back home."
+        },
+
+        {
+          "name" : "ClassmateC",
+          "content" : "Hi Vincent, are you also coming to the library to study?"
+        },
+
+        {
+          "name" : "Vincent",
+          "content" : "Yeah, yesterday I couldn't understand a few questions. Let's see if we can find the answers at the library."
+        },
+        {
+          "name" : "ClassmateC",
+          "content" : "You study really hard; no wonder you're doing so well! "
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Can't say my grades are good. The academic pressure is just too intense, forcing me to work this hard."
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

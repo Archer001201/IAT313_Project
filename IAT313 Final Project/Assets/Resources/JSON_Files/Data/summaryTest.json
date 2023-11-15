@@ -6,14 +6,14 @@
       "conditionStudy" : [1,2],
       "conditionLove" : [0,2],
       "branch" : "Summary branch 1",
-      "nextLevel" : "002"
+      "nextLevel" : "L002"
     },
     {
       "comment" : "Condition [x,y] -> x: less(0) bigger(1), y: value",
       "conditionStudy" : [1,2],
       "conditionLove" : [1,2],
       "branch" : "Summary Branch 2",
-      "nextLevel" : "002"
+      "nextLevel" : "L002"
     }
   ]
 }

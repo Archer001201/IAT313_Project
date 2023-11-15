@@ -32,7 +32,6 @@ namespace Dialogue
 
         private string _levelId;
         private string _sceneName;
-        // private EventInfo _eventInfoInData;
         private static readonly int Horizontal = Animator.StringToHash("horizontal");
         private static readonly int Vertical = Animator.StringToHash("vertical");
         private bool _hasAnimatorController;
@@ -156,13 +155,18 @@ namespace Dialogue
                 else
                 {
                     _isTalking = false;
-                    canTalk = false;
+                    if (!isTeleport) canTalk = false;
                     
                     EventHandler.CloseDialoguePanel();
                     if (!isTeleport)
                     {
                         nameText.color = new Color(0.5f,0.5f,0.5f);
                         EventHandler.DeliverEventName(jsonFile);
+                    }
+                    else
+                    {
+                        LoadJson(jsonFile);
+                        FillDialogueStack();
                     }
                     if (dialogueEventSet.mainEvent) EventHandler.CostActionPoint();
                 }
@@ -189,9 +193,10 @@ namespace Dialogue
             _dialogueOptions = null;
             EventHandler.DestroyOptions();
             FillDialogueStack();
-            
-            if (isTeleport)
-                EventHandler.LoadNextScene(nextSceneName);
+
+            if (!isTeleport) return;
+            if (nextSceneName != "Cancel") EventHandler.LoadNextScene(nextSceneName);
+            else currentDialogueEventID = "D001";
         }
 
         // ReSharper disable Unity.PerformanceAnalysis
@@ -210,6 +215,7 @@ namespace Dialogue
         {
             if (_isSelecting && _dialogueOptions != null) SelectionConfirmed();
             if (!_isTalking && _dialogueStack != null) StartCoroutine(DialogueRoutine());
+            
             FacePlayer(horizontal,vertical);
         }
 

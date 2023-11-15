@@ -28,7 +28,7 @@ namespace Player
             _inputControls.GamePlay.NavigationUp.performed += _ => EventHandler.NavigationUp();
             _inputControls.GamePlay.NextLevel.performed += _ =>
             {
-                if (_playerData.actionPoint <= 0) SceneManager.LoadScene("TestScene3");
+                if (_playerData.actionPoint <= 0) SceneManager.LoadScene("Summary");
             };
         }
 

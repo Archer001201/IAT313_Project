@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5de5fc61284c46a59b06f69c9e7585c, type: 3}
   m_Name: EventData_SO
   m_EditorClassIdentifier: 
-  currentLevelID: L001
+  currentLevelID: L002
   levels:
   - levelID: L001
     scenes:
@@ -20,40 +20,111 @@ MonoBehaviour:
       events:
       - fileName: E001
         position: {x: 1, y: 1, z: 0}
-        isFinished: 1
+        isFinished: 0
       npcs:
       - npcName: Mom
         position: {x: 0, y: 1}
       teleportFiles:
-      - TP_HM001
+      - TP_HM002
     - sceneName: Classroom
-      events: []
+      events:
+      - fileName: E004
+        position: {x: 1.2, y: 2.2, z: 0}
+        isFinished: 0
       npcs: []
       teleportFiles:
-      - TP_CLSR001
+      - TP_CLSR002
     - sceneName: Office
       events:
       - fileName: E002
         position: {x: 0, y: 0, z: 0}
-        isFinished: 1
+        isFinished: 0
       npcs: []
       teleportFiles:
       - TP_OFC001
     - sceneName: Playground
-      events: []
+      events:
+      - fileName: E005
+        position: {x: 0, y: 0, z: 0}
+        isFinished: 0
       npcs: []
       teleportFiles:
       - TP_PLGD001
     - sceneName: Library
-      events: []
+      events:
+      - fileName: E003
+        position: {x: 0, y: 0, z: 0}
+        isFinished: 0
       npcs: []
       teleportFiles:
       - TP_LBRY001
     - sceneName: Hallway
-      events: []
-      npcs: []
+      events:
+      - fileName: E006
+        position: {x: 0, y: 0, z: 0}
+        isFinished: 0
+      npcs:
+      - npcName: ClassmateB
+        position: {x: -0.5, y: 0}
       teleportFiles:
       - TP_HW101
-      - TP_HW201
+      - TP_HW202
       - TP_HW301
-    summaryFile: 
+    summaryFile: summaryTest
+  - levelID: L002
+    scenes:
+    - sceneName: Home
+      events:
+      - fileName: E002
+        position: {x: 1, y: 1, z: 0}
+        isFinished: 0
+      npcs:
+      - npcName: Mom
+        position: {x: 0, y: 1}
+      teleportFiles:
+      - TP_HM002
+    - sceneName: Classroom
+      events:
+      - fileName: E004
+        position: {x: 1.2, y: 2.2, z: 0}
+        isFinished: 0
+      npcs: []
+      teleportFiles:
+      - TP_CLSR002
+    - sceneName: Office
+      events:
+      - fileName: E002
+        position: {x: 0, y: 0, z: 0}
+        isFinished: 0
+      npcs: []
+      teleportFiles:
+      - TP_OFC001
+    - sceneName: Playground
+      events:
+      - fileName: E005
+        position: {x: 0, y: 0, z: 0}
+        isFinished: 0
+      npcs: []
+      teleportFiles:
+      - TP_PLGD001
+    - sceneName: Library
+      events:
+      - fileName: E003
+        position: {x: 0, y: 0, z: 0}
+        isFinished: 0
+      npcs: []
+      teleportFiles:
+      - TP_LBRY001
+    - sceneName: Hallway
+      events:
+      - fileName: E006
+        position: {x: 0, y: 0, z: 0}
+        isFinished: 0
+      npcs:
+      - npcName: ClassmateB
+        position: {x: -0.5, y: 0}
+      teleportFiles:
+      - TP_HW101
+      - TP_HW202
+      - TP_HW301
+    summaryFile: summaryTest

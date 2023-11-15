@@ -1,0 +1,32 @@
+{
+  "dialogueEventSetID" : "E005",
+  "character" : "ClassmateA",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "ClassmateA",
+          "content" : "Hi, Vincent, do you want to play basketball together? Let's relax a bit."
+        },
+
+        {
+          "name" : "Vincent",
+          "content" : "No, thanks. I need to get back home quickly to continue my review."
+        },
+        {
+          "name" : "ClassmateA",
+          "content" : "The new student who joined our class today is so pretty!"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Are you talking about Yvonne? (She does seem quite beautiful.)"
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

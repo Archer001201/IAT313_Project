@@ -1,0 +1,29 @@
+{
+  "dialogueEventSetID" : "E004",
+  "character" : "ClassmateB",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "ClassmateB",
+          "content" : "The pressure is overwhelming, and there's another mock exam coming up in a while…."
+        },
+
+        {
+          "name" : "Vincent",
+          "content" : "Yes, I feel a lot of pressure too. My parents put pressure on me every day."
+        },
+
+        {
+          "name" : "ClassmateB",
+          "content" : "Let's work hard together, Vincent."
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}
