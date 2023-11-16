@@ -1,6 +1,6 @@
 {
   "dialogueEventSetID" : "E001",
-  "character" : "ClassmateA",
+  "character" : "ClassmateC",
   "mainEvent" : false,
   "dialogueEvents" : [
     {
@@ -8,7 +8,7 @@
 
       "dialogues" : [
         {
-          "name" : "ClassmateA",
+          "name" : "ClassmateC",
           "content" : "Isn't that Vincent? You've already built a good relationship with the new female student so quickly?"
         },
         {

@@ -1,6 +1,6 @@
 {
   "dialogueEventSetID" : "E011",
-  "character" : "ClassmateB",
+  "character" : "ClassmateA",
   "mainEvent" : false,
   "dialogueEvents" : [
     {
@@ -8,7 +8,7 @@
 
       "dialogues" : [
         {
-          "name" : "ClassmateB",
+          "name" : "ClassmateA",
           "content" : "It's almost time for class, Vincent. I haven't done my homework. Can you let me copy yours?"
         },
         {
