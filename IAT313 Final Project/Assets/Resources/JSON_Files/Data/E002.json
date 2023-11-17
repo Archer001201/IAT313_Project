@@ -1,7 +1,7 @@
 {
   "dialogueEventSetID" : "E002",
   "character" : "Teacher",
-  "mainEvent" : false,
+  "mainEvent" : true,
   "dialogueEvents" : [
     {
       "dialogueEventID" : "D001",
@@ -24,7 +24,21 @@
         {
           "name" : "Yvonne",
           "content" : "Hello, I'm Yvonne. Nice to meet you. "
-        },
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "Welcome...",
+          "nextDialogueEventID" : "D002",
+          "effect" : [0,2,1]
+        }
+      ]
+    },
+    {
+      "dialogueEventID" : "D002",
+
+      "dialogues" : [
         {
           "name" : "Vincent",
           "content" : "Hello, Yvonne, I'm Vincent. Feel free to ask me anything you'd like to know about the school anytime! "

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxValue: 10
   maxActionPoint: 3
-  stress: 8
-  love: 6
-  study: 6
+  stress: 5
+  love: 0
+  study: 0
   actionPoint: 3

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5de5fc61284c46a59b06f69c9e7585c, type: 3}
   m_Name: EventData_SO
   m_EditorClassIdentifier: 
-  currentLevelID: L002
+  currentLevelID: L001
   levels:
   - levelID: L001
     scenes:
@@ -30,7 +30,7 @@ MonoBehaviour:
       events:
       - fileName: E004
         position: {x: 1.2, y: 2.2, z: 0}
-        isFinished: 1
+        isFinished: 0
       npcs: []
       teleportFiles:
       - TP_CLSR002
@@ -38,7 +38,7 @@ MonoBehaviour:
       events:
       - fileName: E002
         position: {x: 3.29, y: 0.56, z: 0}
-        isFinished: 1
+        isFinished: 0
       npcs:
       - npcName: Yvonne
         position: {x: 3.58, y: 1.31}
@@ -64,7 +64,7 @@ MonoBehaviour:
       events:
       - fileName: E006
         position: {x: -3.25, y: 1.93, z: 0}
-        isFinished: 1
+        isFinished: 0
       npcs:
       - npcName: ClassmateB
         position: {x: -2.93, y: 2.04}

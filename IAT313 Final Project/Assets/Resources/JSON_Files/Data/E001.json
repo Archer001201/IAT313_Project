@@ -1,14 +1,14 @@
 {
   "dialogueEventSetID" : "E001",
   "character" : "Dad",
-  "mainEvent" : false,
+  "mainEvent" : true,
   "dialogueEvents" : [
     {
       "dialogueEventID" : "D001",
 
       "dialogues" : [
         {
-          "name" : "Vincent",
+          "name" : "",
           "content" : "(Today is the 100th day left to the entrance exam and I must try my best!)"
         },
         {
@@ -22,6 +22,42 @@
         {
           "name" : "Mom",
           "content" : "Your destiny hinges on the college entrance examination, and it's not just your fate but also the fate of our entire family."
+        }
+      ],
+
+      "options" : [
+
+        {
+          "optionContent" : "I feel stressful...",
+          "nextDialogueEventID" : "D002",
+          "effect" : [1,0,0]
+        },
+        {
+          "optionContent" : "I don't like...",
+          "nextDialogueEventID" : "D003",
+          "effect" : [0,0,0]
+        }
+      ]
+    },
+    {
+      "dialogueEventID" : "D002",
+
+      "dialogues" : [
+        {
+          "name" : "",
+          "content" : "I feel a lot of pressure from my parents' words, but I know I must study hard to meet their expectations."
+        }
+      ],
+
+      "options" : []
+    },
+    {
+      "dialogueEventID" : "D003",
+
+      "dialogues" : [
+        {
+          "name" : "",
+          "content" : "Of course, I know I need to study hard, but can my parents putting pressure on me every day really help me improve?"
         }
       ],
 

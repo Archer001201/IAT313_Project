@@ -1,7 +1,7 @@
 {
   "dialogueEventSetID" : "E006",
   "character" : "ClassmateA",
-  "mainEvent" : false,
+  "mainEvent" : true,
   "dialogueEvents" : [
     {
       "dialogueEventID" : "D001",
