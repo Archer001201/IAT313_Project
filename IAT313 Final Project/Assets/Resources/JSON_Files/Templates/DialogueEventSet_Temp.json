@@ -1,24 +1,50 @@
 {
-  "dialogueEventSetID" : "000",
-  "character" : "Yvonne",
+  "dialogueEventSetID" : "E001",
+  "character" : "NPC Name",
   "mainEvent" : true,
   "dialogueEvents" : [
     {
-      "dialogueEventID" : "000",
-
+      "dialogueEventID" : "D001",
       "dialogues" : [
         {
-          "name" : "name",
+          "name" : "npc",
           "content" : "content"
         },
-
         {
-          "name" : "name",
+          "name" : "player",
           "content" : "content"
         },
-
         {
-          "name" : "name",
+          "name" : "npc",
+          "content" : "content"
+        }
+      ],
+      "options" : [
+        {
+          "optionContent" : "option A",
+          "nextDialogueEventID" : "D002",
+          "effect" : [1,1,1]
+        },
+        {
+          "optionContent" : "option B",
+          "nextDialogueEventID" : "D003"
+        }
+      ]
+    },
+    
+    {
+      "dialogueEventID" : "D002",
+      "dialogues" : [
+        {
+          "name" : "npc",
+          "content" : "content"
+        },
+        {
+          "name" : "player",
+          "content" : "content"
+        },
+        {
+          "name" : "npc",
           "content" : "content"
         }
       ],
@@ -26,17 +52,17 @@
       "options" : [
         {
           "optionContent" : "option content",
-          "nextDialogueEventID" : "000"
+          "nextDialogueEventID" : "D002"
         },
 
         {
           "optionContent" : "option content",
-          "nextDialogueEventID" : "000"
+          "nextDialogueEventID" : "D002"
         },
 
         {
           "optionContent" : "option content",
-          "nextDialogueEventID" : "000"
+          "nextDialogueEventID" : "D002"
         }
       ]
     }

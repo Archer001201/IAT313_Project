@@ -1,5 +1,5 @@
 {
-  "dialogueEventID" : "000",
+  "dialogueEventID" : "D001",
   
   "dialogues" : [
     {
@@ -21,17 +21,17 @@
   "options" : [
     {
       "optionContent" : "option content",
-      "nextDialogueEventID" : "000"
+      "nextDialogueEventID" : "D002"
     },
     
     {
       "optionContent" : "option content",
-      "nextDialogueEventID" : "000"
+      "nextDialogueEventID" : "D002"
     },
     
     {
       "optionContent" : "option content",
-      "nextDialogueEventID" : "000"
+      "nextDialogueEventID" : "D002"
     }
   ]
 }
