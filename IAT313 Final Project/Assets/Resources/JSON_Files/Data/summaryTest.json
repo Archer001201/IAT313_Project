@@ -2,17 +2,19 @@
   "summaryID" : "000",
   "branches" : [
     {
-      "comment" : "Condition [x,y] -> x: less(0) bigger(1), y: value",
-      "conditionStudy" : [1,2],
-      "conditionLove" : [0,2],
-      "branch" : "Summary branch 1",
+      "comment" : "Condition [x,y] -> x: bigger(0) less(1), y: value",
+      "conditionStudy" : [0,0],
+      "conditionLove" : [0,0],
+      "conditionFallInLove" : false,
+      "branch" : "Summary Branch 2",
       "nextLevel" : "L002"
     },
     {
-      "comment" : "Condition [x,y] -> x: less(0) bigger(1), y: value",
-      "conditionStudy" : [1,2],
-      "conditionLove" : [1,2],
-      "branch" : "Summary Branch 2",
+      "comment" : "Condition [x,y] -> x: bigger(0) less(1), y: value",
+      "conditionStudy" : [0,0],
+      "conditionLove" : [0,0],
+      "conditionFallInLove" : true,
+      "branch" : "Summary branch 1",
       "nextLevel" : "L002"
     }
   ]

@@ -18,7 +18,7 @@ MonoBehaviour:
     scenes:
     - sceneName: Home
       events:
-      - fileName: E001
+      - fileName: E027
         position: {x: 1.14, y: 2.34, z: 0}
         isFinished: 0
       npcs:
@@ -72,7 +72,7 @@ MonoBehaviour:
       - TP_HW101
       - TP_HW202
       - TP_HW301
-    summaryFile: S001
+    summaryFile: summaryTest
     audioFile: Casual theme loop 3
   - levelID: L002
     scenes:

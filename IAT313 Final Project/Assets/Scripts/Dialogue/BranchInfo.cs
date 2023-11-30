@@ -8,6 +8,7 @@ namespace Dialogue
     {
         public int[] conditionStudy;
         public int[] conditionLove;
+        public bool conditionFallInLove;
         [TextArea] public string branch;
         public string nextLevel;
     }

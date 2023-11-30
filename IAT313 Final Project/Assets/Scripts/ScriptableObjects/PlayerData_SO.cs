@@ -14,6 +14,7 @@ namespace ScriptableObjects
         public float love;
         public float study;
         public int actionPoint;
+        public bool fallInLove;
         
         private void OnEnable()
         {
@@ -24,6 +25,10 @@ namespace ScriptableObjects
                 stress += floats[0];
                 love += floats[1] + delta;
                 study += floats[2] + delta;
+                if (floats.Length > 3 && floats[3] > 0)
+                {
+                    fallInLove = true;
+                }
             };
         }
     }

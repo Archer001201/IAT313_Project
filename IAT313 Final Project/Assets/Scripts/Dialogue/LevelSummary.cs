@@ -81,7 +81,7 @@ namespace Dialogue
                 bool isSatisfiedStudy = false;
                 bool isSatisfiedLove = false;
 
-                if (branch.conditionStudy[0] == 0)
+                if (branch.conditionStudy[0] == 1)
                 {
                     if (playerData.study < branch.conditionStudy[1]) isSatisfiedStudy = true;
                 }
@@ -90,7 +90,7 @@ namespace Dialogue
                     if (playerData.study >= branch.conditionStudy[1]) isSatisfiedStudy = true;
                 }
                 
-                if (branch.conditionLove[0] == 0)
+                if (branch.conditionLove[0] == 1)
                 {
                     if (playerData.love < branch.conditionLove[1]) isSatisfiedLove = true;
                 }
@@ -99,7 +99,9 @@ namespace Dialogue
                     if (playerData.love >= branch.conditionLove[1]) isSatisfiedLove = true;
                 }
 
-                if (!isSatisfiedStudy || !isSatisfiedLove) continue;
+                var isSatisfiedState = (playerData.fallInLove == branch.conditionFallInLove);
+
+                if (!isSatisfiedStudy || !isSatisfiedLove || !isSatisfiedState) continue;
                 validCondition = true;
                 summaryText.text = "";
                 yield return summaryText.DOText(branch.branch, 3f).WaitForCompletion();
