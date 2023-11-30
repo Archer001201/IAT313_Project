@@ -1,0 +1,31 @@
+{
+  "dialogueEventSetID" : "E015",
+  "character" : "ClassmateB",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "ClassmateB",
+          "content" : "Oh, I messed up this exam."
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Study on your own; don't copy homework. You'll make progress."
+        },
+        {
+          "name" : "ClassmateB",
+          "content" : "How did your exam go? It must have been fine. I'm afraid to go home."
+        },
+        {
+          "name" : "Vincent",
+          "content" : "I did quite average on the exam. I'm sure I'll get scolded again when I get home."
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

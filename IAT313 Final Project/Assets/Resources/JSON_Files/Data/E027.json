@@ -1,0 +1,105 @@
+{
+  "dialogueEventSetID" : "E027",
+  "character" : "Yvonne",
+  "mainEvent" : true,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "",
+          "content" : "Do you choose to confess your love to Yvonne?"
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "Yes",
+          "nextDialogueEventID" : "D002",
+          "effect" : [0,3,0]
+        },
+        {
+          "optionContent" : "No",
+          "nextDialogueEventID" : "D003",
+          "effect" : [0,0,0]
+        }
+      ]
+    },
+    {
+      "dialogueEventID" : "D002",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "Uh, hey, Yvonne... I, um, I've been wanting to talk to you. It’s kind of hard for me to say this, but... I guess, I mean…"
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "Hey Vincent! What's up? You seem a bit nervous. Is everything okay?"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Yeah, yeah, I'm fine. It's just that, um, I’ve been thinking a lot lately. About us. Well, not us, us, but you know, um, you and me, and…"
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "Go on, I’m listening."
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Right, so, um, I've really enjoyed spending time with you. Like, a lot. And, uh, you've been on my mind, I mean, pretty much all the time."
+        },
+        {
+          "name" : "Vincent",
+          "content" : "This is hard to say, but I think, well, I more than just like you, Yvonne. I... I really like you. Like, like-like you. You know?"
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "Vincent, that’s really sweet. I'm really glad you shared that with me. You know, I... I feel a lot for you too."
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "But, I've been thinking about this a lot, and I believe right now, our main focus should be on our studies, especially with the exams coming up."
+        },
+        {
+          "name" : "Vincent",
+          "content" : "I understand, Yvonne. It's just that I couldn't keep it to myself anymore."
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "And I'm glad you didn't. It means a lot to me, really. But let’s make a promise, okay? Let’s both give our best for these exams."
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "And if, you know, we both end up in the same college, maybe then, we can explore this... us, without any distractions or worries."
+        },
+        {
+          "name" : "Vincent",
+          "content" : "That sounds like a plan. It gives me even more motivation to do well now."
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "Exactly! And no matter what, Vincent, you're very special to me. Let's work hard together and see where the future takes us."
+        }
+      ],
+      "options" : []
+    },
+    {
+      "dialogueEventID" : "D003",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "I did a set of last year's exam questions yesterday, and they are better than last time!"
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "This is the result of your hard work, let’s keep working hard! !"
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

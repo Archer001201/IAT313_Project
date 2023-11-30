@@ -1,0 +1,27 @@
+{
+  "dialogueEventSetID" : "E021",
+  "character" : "ClassmateC",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "ClassmateC",
+          "content" : "Vincent, you know, my mother bought me new sneakers as a reward for me getting good grades on the test!"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Wow, that sounds great!"
+        },
+        {
+          "name" : "ClassmateC",
+          "content" : "Can't wait to play basketball after school and try out my new sneakers!!!"
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

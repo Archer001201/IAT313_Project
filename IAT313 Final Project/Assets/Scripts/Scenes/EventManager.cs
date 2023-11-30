@@ -20,6 +20,7 @@ namespace Scenes
         private string _currentFile;
         private int _currentLevelIndex;
         private int _currentSceneIndex;
+        private AudioSource _audioSource;
 
         [SerializeField] private List<GameObject> teleports;
 
@@ -27,6 +28,7 @@ namespace Scenes
         {
             _currentScene = SceneManager.GetActiveScene();
             _sceneName = _currentScene.name;
+            _audioSource = GetComponent<AudioSource>();
             LoadResources();
             InstantiateObjects();
         }
@@ -79,6 +81,13 @@ namespace Scenes
         
 
             if (currentLevel == null) return;
+            string audioSourceFile = currentLevel.audioFile;
+            AudioClip clip = Resources.Load<AudioClip>("Audio/" + audioSourceFile);
+            if (clip != null)
+            {
+                _audioSource.clip = clip;
+                _audioSource.Play();
+            }
             for (var i = 0; i < currentLevel.scenes.Count; i++)
             {
                 var myScene = currentLevel.scenes[i];

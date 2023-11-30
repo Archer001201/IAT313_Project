@@ -1,0 +1,28 @@
+{
+  "dialogueEventSetID" : "TP_HM002",
+  "character" : "",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "I'm so nervous today, the grades are coming out. Although I've worked hard before, it's always hard to avoid worrying about the results."
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "Classroom",
+          "nextDialogueEventID" : ""
+        },
+        {
+          "optionContent" : "Cancel",
+          "nextDialogueEventID" : ""
+        }
+      ]
+    }
+  ]
+}

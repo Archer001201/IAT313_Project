@@ -1,0 +1,71 @@
+{
+  "dialogueEventSetID" : "E020",
+  "character" : "Yvonne",
+  "mainEvent" : true,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "Yvonne",
+          "content" : "Good morning Vincent, why do you look like you are not doing well today?"
+        },
+        {
+          "name" : "",
+          "content" : "Do you want to tell her about the conversation between your parents and you in the morning?"
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "Yes",
+          "nextDialogueEventID" : "D002",
+          "effect" : [0,0,1]
+        },
+        {
+          "optionContent" : "No",
+          "nextDialogueEventID" : "D003",
+          "effect" : [0,0,0]
+        }
+      ]
+    },
+    {
+      "dialogueEventID" : "D002",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "My mother said her grades were not ideal because I didn't make any progress."
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "In fact, there is still time to sprint for results, so don’t be unhappy! We can learn and work together!"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "you're right! See you in the library this afternoon!"
+        }
+      ],
+
+      "options" : []
+    },
+    {
+      "dialogueEventID" : "D003",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "I didn't sleep well last night….."
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "Don't be too stressed!"
+        }
+      ],
+
+      "options" : []
+    }
+    
+  ]
+}

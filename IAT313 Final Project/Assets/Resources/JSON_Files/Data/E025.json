@@ -1,0 +1,58 @@
+{
+  "dialogueEventSetID" : "E025",
+  "character" : "ClassmateA",
+  "mainEvent" : true,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "ClassmateA",
+          "content" : "Vincent, you came so early. Hi, Yvonne! Have you been going to school together lately?"
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "Yes",
+          "nextDialogueEventID" : "D002",
+          "effect" : [0,1,0]
+        },
+        {
+          "optionContent" : "No",
+          "nextDialogueEventID" : "D003",
+          "effect" : [0,0,0]
+        }
+      ]
+    },
+    {
+      "dialogueEventID" : "D002",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "We did come to school together recently because our homes are so close! haha.…"
+        }
+      ],
+
+      "options" : []
+    },
+    {
+      "dialogueEventID" : "D003",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "I was just, uh, I mean, we don't go to school together every day, but we bumped into each other on the way to school today…"
+        },
+        {
+          "name" : "ClassmateA",
+          "content" : "Um? I don’t believe what you said, hahaha."
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

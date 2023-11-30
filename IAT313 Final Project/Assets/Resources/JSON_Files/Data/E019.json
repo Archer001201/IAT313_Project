@@ -1,0 +1,23 @@
+{
+  "dialogueEventSetID" : "E019",
+  "character" : "Dad",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "Dad",
+          "content" : "Your mother's tone is a bit harsh, you need to work hard, but you have to learn to control stress!"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "I know dad, but what mom said was not wrong.…"
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

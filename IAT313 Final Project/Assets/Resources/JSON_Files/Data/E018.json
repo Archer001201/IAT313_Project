@@ -1,0 +1,31 @@
+{
+  "dialogueEventSetID" : "E018",
+  "character" : "Mom",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "Mom",
+          "content" : "I'm not satisfied with your score in this exam"
+        },
+        {
+          "name" : "Mom",
+          "content" : "There are only 60 days until the college entrance examination. You must make progress in every test."
+        },
+        {
+          "name" : "Mom",
+          "content" : "I really don’t know what you are working hard for every day…"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "I know mom.…"
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

@@ -9,5 +9,6 @@ namespace Dialogue
         public string levelID;
         public List<SceneInfo> scenes;
         public string summaryFile;
+        public string audioFile;
     }
 }

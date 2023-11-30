@@ -1,0 +1,50 @@
+{
+  "dialogueEventSetID" : "ES001",
+  "character" : "ClassmateA",
+  "mainEvent" : true,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "ClassmateA",
+          "content" : "Hi Vincent, do you want to play basketball with us and relax?"
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "Yes",
+          "nextDialogueEventID" : "D002",
+          "effect" : [-1,0,0]
+        },
+        {
+          "optionContent" : "No",
+          "nextDialogueEventID" : "D003",
+          "effect" : [0,0,0]
+        }
+      ]
+    },
+    {
+      "dialogueEventID" : "D002",
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "Of course, it’s good. I haven’t played it in a long time."
+        }
+      ],
+      "options" : []
+    },
+    {
+      "dialogueEventID" : "D003",
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "You guys go ahead and play, I want to go home quickly and look at the wrong questions."
+        }
+      ],
+      "options" : []
+    }
+  ]
+}

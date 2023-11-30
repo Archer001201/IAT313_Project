@@ -1,0 +1,23 @@
+{
+  "dialogueEventSetID" : "E014",
+  "character" : "Yvonne",
+  "mainEvent" : true,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "Yvonne",
+          "content" : "Thank you, Vincent! Thanks to your help with tutoring in math, my grades have improved compared to before!"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "You're welcome! Helping each other among classmates is only natural; I'm glad I could assist you!"
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

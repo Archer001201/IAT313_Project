@@ -1,0 +1,23 @@
+{
+  "dialogueEventSetID" : "E026",
+  "character" : "Yvonne",
+  "mainEvent" : true,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "I feel like my studies have been very efficient recently! The establishment of our \"study group\" is well worth it!"
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "Hahahaha....Then let's continue until the final exam! Study together every day"
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

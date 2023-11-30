@@ -1,0 +1,39 @@
+{
+  "dialogueEventSetID" : "E024",
+  "character" : "Mom",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "Mom",
+          "content" : "Why did you go out 15 minutes earlier than usual during this period?"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Ah... isn't it getting closer to the exam? I want to go to school early to preview."
+        },
+        {
+          "name" : "Mom",
+          "content" : "That's okay, don't be too tired, your health is also important. "
+        },
+        {
+          "name" : "Mom",
+          "content" : "By the way, why are you talking in the room every night lately? Who are you talking to?"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Uh... I have a classmate who created an online study group, it's like, you know, we can help each other."
+        },
+        {
+          "name" : "Mom",
+          "content" : "Sounds good, but don't go to bed too late."
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

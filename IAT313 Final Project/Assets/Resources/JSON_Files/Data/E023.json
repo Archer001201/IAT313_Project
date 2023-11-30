@@ -1,0 +1,90 @@
+{
+  "dialogueEventSetID" : "E023",
+  "character" : "Yvonne",
+  "mainEvent" : true,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "Yvonne",
+          "content" : "Hi Vincent, if you have any questions about liberal arts, you can ask me! This is your weakness, I hope I can help you."
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Thank you very much! You can also ask me questions about mathematics or physics!"
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "This is what helping each other means!"
+        },
+        {
+          "name" : "",
+          "content" : "(The study lasted two hours.…)"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Today is really a fruitful day!"
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "yes! It feels like it’s really efficient for us to study together."
+        },
+        {
+          "name" : "Vincent",
+          "content" : "It's time to go home, let's go."
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "Oh! Do you want to study together on the phone tonight? It’s a virtual study room!"
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "Yes",
+          "nextDialogueEventID" : "D002",
+          "effect" : [0,1,0]
+        },
+        {
+          "optionContent" : "No",
+          "nextDialogueEventID" : "D003",
+          "effect" : [0,0,0]
+        }
+      ]
+    },
+    {
+      "dialogueEventID" : "D002",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "wow! Of course! When you are ready, you can send me a message. By the way, there is also a link."
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "Okay, okay, then let’s set it at 7 p.m."
+        }
+      ],
+
+      "options" : []
+    },
+    {
+      "dialogueEventID" : "D003",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "Emm. . . My mother is very strict with me. In order to avoid her nagging, I'm afraid this method won't work."
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "Ah~ I see, okay…Ah~I see, okay..."
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}
