@@ -11,8 +11,8 @@
     },
     {
       "comment" : "Condition [x,y] -> x: less(0) bigger(1), y: value",
-      "conditionStudy" : [1,0],
-      "conditionLove" : [1,0],
+      "conditionStudy" : [0,0],
+      "conditionLove" : [0,0],
       "conditionFallInLove" : false,
       "branch" : "With the college entrance exam countdown at 40 days, the atmosphere is charged with a mix of anticipation and anxiety.\nVincent choose not to express his feelings, their interactions continue to revolve around a variety of topics, ranging from the mundane to the more profound, as they both seek to lighten the mood during the intense preparation period.\nThis phase signifies a maturity in their relationship, where understanding and mutual respect take precedence, setting a tone of solidarity as they navigate the final stretch before the exams.",
       "nextLevel" : "L006"

@@ -107,15 +107,22 @@ namespace Dialogue
                 yield return summaryText.DOText(branch.branch, 10f).WaitForCompletion();
                 _nextLevelID = branch.nextLevel;
                 _isFinished = true;
+               
             }
-            if (!validCondition) Debug.LogError(jsonFile + ".json has invalid condition");
+
+            if (!validCondition)
+            {
+                Debug.LogError(jsonFile + ".json has invalid condition");
+                
+            }
         }
 
         private void GoToNextLevel(InputAction.CallbackContext context)
         {
             if (!_isFinished) return;
             Debug.Log("Next Level ID:" + _nextLevelID);
-            SceneManager.LoadScene("Home");
+            if (!_nextLevelID.Equals("GameOver")) SceneManager.LoadScene("Home");
+            else SceneManager.LoadScene("GameOver");
             levelData.currentLevelID = _nextLevelID;
             playerData.actionPoint += 3;
         }

@@ -17,6 +17,10 @@
         {
           "optionContent" : "Classroom",
           "nextDialogueEventID" : ""
+        },
+        {
+          "optionContent" : "Cancel",
+          "nextDialogueEventID" : ""
         }
       ]
     }

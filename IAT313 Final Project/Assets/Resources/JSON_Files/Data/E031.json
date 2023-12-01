@@ -18,7 +18,22 @@
         {
           "name" : "Yvonne",
           "content" : "I know, but I'm worried it might be affecting you. You know, all this talk and speculation."
-        },
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "To be honest",
+          "nextDialogueEventID" : "D002",
+          "effect" : [2,0,0,10]
+        }
+      ]
+    },
+
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
         {
           "name" : "Vincent",
           "content" : "To be honest, it's not just the classmates. My mom believes the rumors too. She thinks we're dating, and no explanation from me seems to work."

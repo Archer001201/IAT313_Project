@@ -257,7 +257,7 @@ MonoBehaviour:
         position: {x: 3.19, y: -0.38, z: 0}
         isFinished: 0
       npcs:
-      - npcName: Mom
+      - npcName: Dad
         position: {x: 2.62, y: -0.38}
       teleportFiles:
       - TP_HM005
@@ -315,7 +315,7 @@ MonoBehaviour:
         position: {x: 3.19, y: -0.38, z: 0}
         isFinished: 0
       npcs:
-      - npcName: Mom
+      - npcName: Dad
         position: {x: 2.62, y: -0.38}
       teleportFiles:
       - TP_HM001
@@ -348,7 +348,7 @@ MonoBehaviour:
       - fileName: E031
         position: {x: 3.21, y: 2.06, z: 0}
         isFinished: 0
-      - fileName: ES004
+      - fileName: ES006
         position: {x: 7.07, y: 1.22, z: 0}
         isFinished: 0
       npcs: []
@@ -376,7 +376,7 @@ MonoBehaviour:
         position: {x: 3.19, y: -0.38, z: 0}
         isFinished: 0
       npcs:
-      - npcName: Mom
+      - npcName: Dad
         position: {x: 2.62, y: -0.38}
       teleportFiles:
       - TP_HM006
@@ -403,7 +403,7 @@ MonoBehaviour:
       - TP_PLGD001
     - sceneName: Library
       events:
-      - fileName: ES004
+      - fileName: ES006
         position: {x: 3.21, y: 2.06, z: 0}
         isFinished: 0
       npcs: []

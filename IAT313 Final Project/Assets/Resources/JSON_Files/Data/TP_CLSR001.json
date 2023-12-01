@@ -17,6 +17,10 @@
         {
           "optionContent" : "Hallway",
           "nextDialogueEventID" : ""
+        },
+        {
+          "optionContent" : "Cancel",
+          "nextDialogueEventID" : ""
         }
       ]
     }

@@ -21,6 +21,10 @@
         {
           "optionContent" : "Playground",
           "nextDialogueEventID" : ""
+        },
+        {
+          "optionContent" : "Cancel",
+          "nextDialogueEventID" : ""
         }
       ]
     }

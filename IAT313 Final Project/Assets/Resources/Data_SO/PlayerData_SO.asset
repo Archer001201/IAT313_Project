@@ -16,6 +16,6 @@ MonoBehaviour:
   maxActionPoint: 3
   stress: 5
   love: 0
-  study: 3
+  study: 0
   actionPoint: 3
   fallInLove: 0

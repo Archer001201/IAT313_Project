@@ -22,12 +22,21 @@
           "optionContent" : "Thanks",
           "nextDialogueEventID" : "D002",
           "effect" : [-1,0,0]
-        },
+        }
+        
+      ]
+    },
+    {
+      "dialogueEventID" : "D002",
+
+      "dialogues" : [
         {
           "name" : "Vincent",
           "content" : "Mr.Andrew thank you for your encouragement, I will do my best. "
         }
-      ]
+      ],
+
+      "options" : []
     }
   ]
 }

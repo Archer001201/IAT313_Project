@@ -17,6 +17,10 @@
         {
           "optionContent" : "Office",
           "nextDialogueEventID" : ""
+        },
+        {
+          "optionContent" : "Cancel",
+          "nextDialogueEventID" : ""
         }
       ]
     }

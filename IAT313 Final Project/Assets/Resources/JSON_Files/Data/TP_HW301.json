@@ -21,6 +21,10 @@
         {
           "optionContent" : "Library",
           "nextDialogueEventID" : ""
+        },
+        {
+          "optionContent" : "Cancel",
+          "nextDialogueEventID" : ""
         }
       ]
     }

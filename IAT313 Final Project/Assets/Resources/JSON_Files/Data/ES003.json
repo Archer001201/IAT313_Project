@@ -25,12 +25,12 @@
         {
           "optionContent" : "Yes",
           "nextDialogueEventID" : "D002",
-          "effect" : [-1,0,0]
+          "effect" : [-1,0,0,10]
         },
         {
           "optionContent" : "No",
           "nextDialogueEventID" : "D003",
-          "effect" : [0,0,0]
+          "effect" : [0,0,0,10]
         }
       ]
     },

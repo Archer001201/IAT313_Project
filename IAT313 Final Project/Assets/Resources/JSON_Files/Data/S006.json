@@ -5,7 +5,7 @@
       "comment" : "Condition [x,y] -> x: less(0) bigger(1), y: value",
       "conditionStudy" : [0,0],
       "conditionLove" : [0,0],
-      "conditionFallInLove" : false,
+      "conditionFallInLove" : true,
       "branch" : "As the crucial countdown to the college entrance exam dwindles to a mere 20 days, the pressure intensifies in every aspect of Vincent's life. At home, his mother's scolding becomes more frequent, a reflection of the mounting tension and her high expectations.\nIn these moments, Vincent and Yvonne's relationship is put to the test, as they navigate the challenges of respecting parental expectations while trying to maintain the integrity of their friendship and mutual support. This phase paints a vivid picture of the sacrifices and compromises students often have to make in pursuit of their goals.",
       "nextLevel" : "L007"
     }
