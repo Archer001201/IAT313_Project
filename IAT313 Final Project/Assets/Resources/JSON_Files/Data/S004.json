@@ -1,0 +1,13 @@
+{
+  "summaryID" : "S004",
+  "branches" : [
+    {
+      "comment" : "Condition [x,y] -> x: less(0) bigger(1), y: value",
+      "conditionStudy" : [0,0],
+      "conditionLove" : [0,0],
+      "conditionFallInLove" : false,
+      "branch" : "With 60 days left until the college entrance exams, Vincent's relationships, especially with Yvonne, have grown closer, laying a foundation of companionship and mutual support. The day started on a sour note with Vincent's mother scolding him, leaving him disheartened, but his father's comforting words offered solace and a reminder of the support at home.\nThe hours Vincent and Yvonne spent together in the library not only solidified their study habits but also their emotional connection, reinforcing a partnership that extended beyond academics.\nAs the fourth phase concluded, the days were marked by personal growth and the deepening of relationships. Each encounter, whether with family, friends, or classmates, became a stepping stone towards not only academic readiness but also the cultivation of enduring friendships.",
+      "nextLevel" : "L005"
+    }
+  ]
+}

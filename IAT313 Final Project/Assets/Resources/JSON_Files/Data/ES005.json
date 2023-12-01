@@ -1,0 +1,55 @@
+{
+  "dialogueEventSetID" : "ES004",
+  "character" : "ClassmateA",
+  "mainEvent" : true,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "ClassmateA",
+          "content" : "Vincent, come play basketball with us!"
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "Yes",
+          "nextDialogueEventID" : "D002",
+          "effect" : [-1,0,0]
+        },
+        {
+          "optionContent" : "No",
+          "nextDialogueEventID" : "D003",
+          "effect" : [0,0,0]
+        }
+      ]
+    },
+    {
+      "dialogueEventID" : "D002",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "Of course, I need some physical activity."
+        }
+      ],
+
+      "options" : []
+    },
+    {
+      "dialogueEventID" : "D003",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "No thanks, I still have some homework to finish first."
+        }
+      ],
+
+      "options" : []
+    }
+
+  ]
+}

@@ -17,6 +17,24 @@
         }
       ],
 
+      "options" : [
+        {
+          "optionContent" : "You're welcome",
+          "nextDialogueEventID" : "D002",
+          "effect" : [-1,1,1]
+        }
+      ]
+    },
+    {
+      "dialogueEventID" : "D002",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "You're welcome! Helping each other among classmates is only natural; I'm glad I could assist you!"
+        }
+      ],
+
       "options" : []
     }
   ]

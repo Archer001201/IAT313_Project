@@ -1,0 +1,51 @@
+{
+  "dialogueEventSetID" : "E031",
+  "character" : "Yvonne",
+  "mainEvent" : true,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "Yvonne",
+          "content" : "Hey, Vincent, I've heard about all the gossip going around in school about us. Are you okay?"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Yeah, I've heard it too. It's a bit annoying, but I know we haven’t done anything wrong."
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "I know, but I'm worried it might be affecting you. You know, all this talk and speculation."
+        },
+        {
+          "name" : "Vincent",
+          "content" : "To be honest, it's not just the classmates. My mom believes the rumors too. She thinks we're dating, and no explanation from me seems to work."
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "Really? That must be tough for you."
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Yeah, and because of this, I can't call you anymore. My mom won't listen to my explanations, she's just convinced that we're in a relationship."
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "That’s so unfair. We're just trying to study hard. But I understand, you need to deal with the situation at home."
+        },
+        {
+          "name" : "Vincent",
+          "content" : "I'm really sorry, Yvonne. I don’t want this to affect our friendship or our studies."
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "I know, Vincent. You don't need to apologize. We'll find other ways to study together."
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

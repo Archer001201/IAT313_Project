@@ -1,0 +1,45 @@
+{
+  "summaryID" : "S007",
+  "branches" : [
+    {
+      "comment" : "Condition [x,y] -> x: less(0) bigger(1), y: value",
+      "conditionStudy" : [0,6],
+      "conditionLove" : [0,6],
+      "conditionFallInLove" : true,
+      "branch" : "Vincent works hard and ultimately gets accepted into his dream university. Delightfully, Yvonne also passes the admission test for the same university, and they both enroll. The university campus becomes a new starting point for their love and academic pursuits. Together, they experience countless wonderful moments on campus, and their relationship deepens. Facing the challenges and opportunities of university life together, they become indispensable parts of each other's lives, eventually solidifying their romantic relationship.",
+      "nextLevel" : "L001"
+    },
+    {
+      "comment" : "Condition [x,y] -> x: less(0) bigger(1), y: value",
+      "conditionStudy" : [0,0],
+      "conditionLove" : [0,6],
+      "conditionFallInLove" : true,
+      "branch" : "Despite his efforts, Vincent does not get into his desired university. Meanwhile, Yvonne successfully enters her target school. They start a long-distance relationship, facing challenges such as inconvenient communication, time differences, and varying life rhythms. Over time, these challenges gradually weaken their bond. Eventually, due to distance and diverging life paths, their relationship comes to an end, and they decide to part ways, each searching for new directions in life.",
+      "nextLevel" : "L001"
+    },
+    {
+      "comment" : "Condition [x,y] -> x: less(0) bigger(1), y: value",
+      "conditionStudy" : [0,6],
+      "conditionLove" : [0,0],
+      "conditionFallInLove" : false,
+      "branch" : "Vincent successfully gets admitted to his dream university, achieving a significant milestone in his academic journey. However, he decides not to pursue a relationship with Yvonne. Despite the strong bond they formed over their shared experiences and mutual support, Vincent chooses to focus solely on his academic and personal growth in the new environment. They part ways, carrying with them the memories and lessons learned from their time together. As Vincent embarks on his university life, he and Yvonne move forward on their separate paths, embracing their individual futures.",
+      "nextLevel" : "L001"
+    },
+    {
+      "comment" : "Condition [x,y] -> x: less(0) bigger(1), y: value",
+      "conditionStudy" : [0,0],
+      "conditionLove" : [0,0],
+      "conditionFallInLove" : false,
+      "branch" : "Under the pressure of the exams, Vincent's performance falls short of his expectations, and he does not get into his ideal university. Simultaneously, his relationship with Yvonne also fades due to the post-exam changes in their life trajectories. They do not continue their romantic relationship but choose their own paths. Vincent starts a new life at a university he hadn't anticipated, while Yvonne pursues her own dreams. Their friendship remains a beautiful memory of their high school days, but their life paths do not cross again.",
+      "nextLevel" : "L001"
+    },
+    {
+      "comment" : "Condition [x,y] -> x: less(0) bigger(1), y: value",
+      "conditionStudy" : [0,0],
+      "conditionLove" : [0,0],
+      "conditionFallInLove" : true,
+      "branch" : "Under the pressure of the exams, Vincent's performance falls short of his expectations, and he does not get into his ideal university. Simultaneously, his relationship with Yvonne also fades due to the post-exam changes in their life trajectories. They do not continue their romantic relationship but choose their own paths. Vincent starts a new life at a university he hadn't anticipated, while Yvonne pursues her own dreams. Their friendship remains a beautiful memory of their high school days, but their life paths do not cross again.",
+      "nextLevel" : "L001"
+    }
+  ]
+}

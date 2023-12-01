@@ -1,2 +1,43 @@
 {
+  "dialogueEventSetID" : "E028",
+  "character" : "Mom",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "Mom",
+          "content" : "Vincent, we need to talk! Didn't you say you and your classmates formed an online study group? Is it just one girl in it? Are you lying to me?"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Mom, I know you're worried, but Yvonne and I are really just studying together."
+        },
+        {
+          "name" : "Mom",
+          "content" : "Just studying? Do you think I'd believe such an excuse? The college entrance exams are coming, and you're busy dating at this crucial time!"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Mom, please believe me. We're really just reviewing our coursework. Yvonne has been a big help with my studies."
+        },
+        {
+          "name" : "Mom",
+          "content" : "I don't want to hear it! What you should be doing right now is focusing entirely on your studies, not flirting with girls! Do you have any idea how important your future is?"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "I do, Mom. I'm taking my studies very seriously. Our calls are really just about studying."
+        },
+        {
+          "name" : "Mom",
+          "content" : "How do I know you're telling the truth? You must understand that every decision you make now is crucial. I don’t want you to ruin your future over a momentary whim!"
+        }
+      ],
+
+      "options" : []
+    }
+  ]
 }

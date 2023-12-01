@@ -3,9 +3,10 @@
   "branches" : [
     {
       "comment" : "Condition [x,y] -> x: less(0) bigger(1), y: value",
-      "conditionStudy" : [1,0],
-      "conditionLove" : [1,0],
-      "branch" : "With Vincent's companionship, Yvonne gradually familiarized herself with the school environment, experiencing the warm campus atmosphere. Simultaneously, she demonstrated a proactive attitude towards her studies, actively seeking Vincent's help on academic matters. This supportive atmosphere not only deepened the friendship between the two but also created a positive learning space for them to face academic challenges together. This second scenario marked a beneficial beginning for the two students to collaborate and grow together in the new semester.",
+      "conditionStudy" : [0,0],
+      "conditionLove" : [0,0],
+      "conditionFallInLove" : false,
+      "branch" : "Yvonne's arrival brought a change to Vincent's daily routine as she became his desk mate, fostering a new connection. Guided by Vincent, Yvonne navigated her way around the school, creating a bond between them. In the subsequent ten days, the rhythm of Vincent's life remained undisturbed, devoid of any extraordinary occurrences, yet marked by the subtle growth of friendship and the shared experience of navigating the intricacies of school life together.",
       "nextLevel" : "L002"
     }
   ]

@@ -1,7 +1,7 @@
 {
   "dialogueEventSetID" : "E009",
   "character" : "Yvonne",
-  "mainEvent" : false,
+  "mainEvent" : true,
   "dialogueEvents" : [
     {
       "dialogueEventID" : "D001",
@@ -18,7 +18,21 @@
         {
           "name" : "Yvonne",
           "content" : "I have some questions here that are confusing me, but since math is your strong suit, can you help me out?"
-        },
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "Of course",
+          "nextDialogueEventID" : "D002",
+          "effect" : [0,1,0]
+        }
+      ]
+    },
+    {
+      "dialogueEventID" : "D002",
+
+      "dialogues" : [
         {
           "name" : "Vincent",
           "content" : "Of course, it would be great if I can help you! We can go to the library."

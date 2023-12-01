@@ -22,7 +22,26 @@
         {
           "name" : "Mom",
           "content" : "By the way, why are you talking in the room every night lately? Who are you talking to?"
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "Admit",
+          "nextDialogueEventID" : "D002",
+          "effect" : [0,1,0]
         },
+        {
+          "optionContent" : "(Silent)",
+          "nextDialogueEventID" : "D003",
+          "effect" : [1,0,0]
+        }
+      ]
+    },
+    {
+      "dialogueEventID" : "D002",
+
+      "dialogues" : [
         {
           "name" : "Vincent",
           "content" : "Uh... I have a classmate who created an online study group, it's like, you know, we can help each other."
@@ -30,6 +49,22 @@
         {
           "name" : "Mom",
           "content" : "Sounds good, but don't go to bed too late."
+        }
+      ],
+
+      "options" : []
+    },
+    {
+      "dialogueEventID" : "D003",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "Uh..."
+        },
+        {
+          "name" : "Mom",
+          "content" : "Go to bed early and focus more on your studies. If I find out you're still playing on your phone late at night, I'll have to confiscate it."
         }
       ],
 

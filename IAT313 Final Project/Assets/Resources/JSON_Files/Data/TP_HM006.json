@@ -1,0 +1,28 @@
+{
+  "dialogueEventSetID" : "TP_HM005",
+  "character" : "",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "The college entrance exam is coming up soon. I've already made a lot of preparations for it, and I must not make any mistakes."
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "Classroom",
+          "nextDialogueEventID" : ""
+        },
+        {
+          "optionContent" : "Cancel",
+          "nextDialogueEventID" : ""
+        }
+      ]
+    }
+  ]
+}

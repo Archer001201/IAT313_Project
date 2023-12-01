@@ -1,0 +1,55 @@
+{
+  "dialogueEventSetID" : "E033",
+  "character" : "Mom",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "Mom",
+          "content" : "Vincent, I saw your latest grades, and you've improved a lot!"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Yes, Mom, I've been working hard on my studies."
+        },
+        {
+          "name" : "Mom",
+          "content" : "I might have misunderstood your situation with Yvonne before. It seems that studying together has indeed been helpful."
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Yes, we support each other, and studying together has been really effective."
+        },
+        {
+          "name" : "Mom",
+          "content" : "I might have misunderstood your situation with Yvonne before. It seems that studying together has indeed been helpful."
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Yes, we support each other, and studying together has been really effective."
+        },
+        {
+          "name" : "Mom",
+          "content" : "However, now that there's only one week left until the college entrance exams, it's the final sprint. I hope you can stay focused and give it your all."
+        },
+        {
+          "name" : "Vincent",
+          "content" : "I understand, Mom. I'll concentrate and make sure to perform my best in the exams."
+        },
+        {
+          "name" : "Mom",
+          "content" : "I believe in you. You've always been hardworking, and now it's just about maintaining that momentum until the end."
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Thank you, Mom. I won't let you down."
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "dialogueEventSetID" : "E008",
   "character" : "Teacher",
-  "mainEvent" : false,
+  "mainEvent" : true,
   "dialogueEvents" : [
     {
       "dialogueEventID" : "D001",
@@ -17,7 +17,17 @@
         }
       ],
 
-      "options" : []
+      "options" : [
+        {
+          "optionContent" : "Thanks",
+          "nextDialogueEventID" : "D002",
+          "effect" : [-1,0,0]
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Mr.Andrew thank you for your encouragement, I will do my best. "
+        }
+      ]
     }
   ]
 }

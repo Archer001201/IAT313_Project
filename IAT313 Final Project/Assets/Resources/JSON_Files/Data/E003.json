@@ -1,7 +1,7 @@
 {
   "dialogueEventSetID" : "E003",
   "character" : "ClassmateC",
-  "mainEvent" : false,
+  "mainEvent" : true,
   "dialogueEvents" : [
     {
       "dialogueEventID" : "D001",
@@ -15,8 +15,21 @@
         {
           "name" : "ClassmateC",
           "content" : "Hi Vincent, are you also coming to the library to study?"
-        },
+        }
+      ],
 
+      "options" : [
+        {
+          "optionContent" : "Yes",
+          "nextDialogueEventID" : "D002",
+          "effect" : [0,0,1]
+        }
+      ]
+    },
+    {
+      "dialogueEventID" : "D002",
+
+      "dialogues" : [
         {
           "name" : "Vincent",
           "content" : "Yeah, yesterday I couldn't understand a few questions. Let's see if we can find the answers at the library."

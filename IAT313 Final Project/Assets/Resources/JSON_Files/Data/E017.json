@@ -1,2 +1,62 @@
 {
+  "dialogueEventSetID" : "E017",
+  "character" : "Yvonne",
+  "mainEvent" : true,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "Yvonne",
+          "content" : "Hi Vincent, do you want to walk home from school together?"
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "Yes",
+          "nextDialogueEventID" : "D002",
+          "effect" : [0,1,0]
+        },
+        {
+          "optionContent" : "No",
+          "nextDialogueEventID" : "D003",
+          "effect" : [0,0,0]
+        }
+      ]
+    },
+    {
+      "dialogueEventID" : "D002",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "OK! Let's go together!"
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "In order to repay you for helping me review, I'll buy you a drink!"
+        }
+      ],
+
+      "options" : []
+    },
+    {
+      "dialogueEventID" : "D003",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "I have other things to do. You go home first. We can go home together tomorrow."
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "Oh well. . . See you tomorrow."
+        }
+      ],
+
+      "options" : []
+    }
+  ]
 }

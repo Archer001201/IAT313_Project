@@ -1,0 +1,24 @@
+{
+  "dialogueEventSetID" : "TP_CLSR001",
+  "character" : "",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "",
+          "content" : "The results of the last mock exam are out, and my grade ranking dropped by about 100 places. I don't know how to face my parents when I go home."
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "Hallway",
+          "nextDialogueEventID" : ""
+        }
+      ]
+    }
+  ]
+}

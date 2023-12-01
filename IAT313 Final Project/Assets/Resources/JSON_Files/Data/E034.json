@@ -1,0 +1,39 @@
+{
+  "dialogueEventSetID" : "E034",
+  "character" : "ClassmateC",
+  "mainEvent" : true,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "ClassmateC",
+          "content" : "Hey, Vincent, how did you do on the recent test score?"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Oh, it was okay. I improved in math, but I need to work more on History."
+        },
+        {
+          "name" : "ClassmateC",
+          "content" : "Really? I heard you did exceptionally well in math. How did you study?"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "I've been reviewing with Yvonne. We help each other out, especially with the tough problems."
+        },
+        {
+          "name" : "ClassmateC",
+          "content" : "Sounds good. I think I need a study partner too. Do you think Yvonne would be willing to help me?"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Sure, you can ask her. Yvonne is very diligent, I think she'd be happy to help."
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

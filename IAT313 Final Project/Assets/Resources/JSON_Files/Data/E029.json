@@ -1,0 +1,55 @@
+{
+  "dialogueEventSetID" : "E029",
+  "character" : "Teacher",
+  "mainEvent" : true,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "Teacher",
+          "content" : "Vincent, can I have a word with you? Your mother informed me about a certain situation you're involved in recently."
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Yes, sir. What is it about?"
+        },
+        {
+          "name" : "Teacher",
+          "content" : "It's about your relationship with Yvonne. There’s some talk among your classmates, and even your mother seems concerned."
+        },
+        {
+          "name" : "Teacher",
+          "content" : "They're saying you two might be in a romantic relationship. You know, dating can be a distraction, especially with the exams coming up."
+        },
+        {
+          "name" : "Vincent",
+          "content" : "I assure you, Yvonne and I are just study partners. We formed a group to help each other with our studies."
+        },
+        {
+          "name" : "Teacher",
+          "content" : "I understand, Vincent. But you must be aware of how this looks to others. Perceptions can sometimes be as impactful as reality, especially in a high school setting."
+        },
+        {
+          "name" : "Vincent",
+          "content" : "I understand. But truly, our focus is only on studying. We're both very serious about our exams."
+        },
+        {
+          "name" : "Teacher",
+          "content" : "I believe you, Vincent. I’ve always known you to be a dedicated student. Just make sure to keep a balance and not let anything distract you from your main goal – the exams."
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Thank you, sir. I'll be careful about it and ensure that my studies remain my top priority."
+        },
+        {
+          "name" : "Teacher",
+          "content" : "Good to hear that. Remember, I'm here to support you, not just academically but in navigating these challenges too."
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

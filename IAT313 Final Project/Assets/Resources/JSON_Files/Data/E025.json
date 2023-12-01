@@ -22,7 +22,7 @@
         {
           "optionContent" : "No",
           "nextDialogueEventID" : "D003",
-          "effect" : [0,0,0]
+          "effect" : [0,-1,0]
         }
       ]
     },

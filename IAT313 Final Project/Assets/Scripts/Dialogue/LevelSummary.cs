@@ -104,7 +104,7 @@ namespace Dialogue
                 if (!isSatisfiedStudy || !isSatisfiedLove || !isSatisfiedState) continue;
                 validCondition = true;
                 summaryText.text = "";
-                yield return summaryText.DOText(branch.branch, 3f).WaitForCompletion();
+                yield return summaryText.DOText(branch.branch, 10f).WaitForCompletion();
                 _nextLevelID = branch.nextLevel;
                 _isFinished = true;
             }

@@ -18,7 +18,21 @@
         {
           "name" : "Mom",
           "content" : "I really don’t know what you are working hard for every day…"
-        },
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "Mom...",
+          "nextDialogueEventID" : "D002",
+          "effect" : [2,0,0]
+        }
+      ]
+    },
+    {
+      "dialogueEventID" : "D002",
+
+      "dialogues" : [
         {
           "name" : "Vincent",
           "content" : "I know mom.…"

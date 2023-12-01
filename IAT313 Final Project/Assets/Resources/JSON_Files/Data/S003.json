@@ -1,0 +1,13 @@
+{
+  "summaryID" : "S003",
+  "branches" : [
+    {
+      "comment" : "Condition [x,y] -> x: less(0) bigger(1), y: value",
+      "conditionStudy" : [0,0],
+      "conditionLove" : [0,0],
+      "conditionFallInLove" : false,
+      "branch" : "As the countdown to the college entrance examination hits 85 days, Vincent's daily life is fraught with tension and challenges. On the morning the results were released, Vincent's nervousness was palpable. Although his performance had not regressed, it had not improved either, and the teacher's words reminded him that much effort was still needed to reach his goals.\nDespite the academic pressures, Vincent found valuable support. Yvonne's appreciation for his tutoring over the week offered him some solace. This not only deepened their friendship but also laid a foundation for them to jointly face academic challenges.\nEach choice could impact his future, and Vincent must choose wisely. As the college entrance examination draws ever closer, the friendship and mutual support between Vincent and Yvonne demonstrate their importance to each other's success.",
+      "nextLevel" : "L004"
+    }
+  ]
+}

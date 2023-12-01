@@ -1,0 +1,82 @@
+{
+  "dialogueEventSetID" : "E036",
+  "character" : "Yvonne",
+  "mainEvent" : true,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "Yvonne",
+          "content" : "Vincent, I heard that today is our last day of classes at school, and then they want us to study at home. Can we resume our online study sessions?"
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "Yes",
+          "nextDialogueEventID" : "D002",
+          "effect" : [-1,1,1]
+        },
+        {
+          "optionContent" : "No",
+          "nextDialogueEventID" : "D003",
+          "effect" : [1,1,0]
+        }
+      ]
+    },
+    {
+      "dialogueEventID" : "D002",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "Of course, Yvonne. I also think studying together is more effective."
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "What about your mom... Won't she mind?"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "My grades were really good in the last test, and my mom was pleased with them. "
+        },
+        {
+          "name" : "Vincent",
+          "content" : "She even apologized to me for the misunderstandings she had before. I think she now understands the importance of us studying together."
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "That's great! I really feel I learn better when I study with you."
+        }
+      ],
+
+      "options" : []
+    },
+    {
+      "dialogueEventID" : "D003",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "Oh, Yvonne, I’d like to continue studying with you, but I feel I need some time for personal revision. I want to focus on strengthening my weak areas before the exam."
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "I understand. Indeed, everyone has their own study plan and needs before exams."
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Right, but I’m still grateful for the time we studied together. Good luck with your exams! "
+        },
+        {
+          "name" : "Yvonne",
+          "content" : "Thank you, Vincent. Let's both do our best!"
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "dialogueEventSetID" : "E013",
+  "character" : "ClassmateC",
+  "mainEvent" : true,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "ClassmateC",
+          "content" : "Vincent, you're studying in the library again. You always seem so diligent in your studies."
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "Yes",
+          "nextDialogueEventID" : "D002",
+          "effect" : [0,0,1]
+        },
+
+        {
+          "optionContent" : "No",
+          "nextDialogueEventID" : "D003",
+          "effect" : [0,0,-1]
+        }
+      ]
+    },
+    {
+      "dialogueEventID" : "D002",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "Yes, the study room is very quiet. I usually choose to complete the homework assigned by the teacher there, and then do some additional exercises after class."
+        }
+      ],
+
+      "options" : []
+    },
+    {
+      "dialogueEventID" : "D003",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "No, it's just that I think I left my pencil case in the library yesterday, so I came to check."
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

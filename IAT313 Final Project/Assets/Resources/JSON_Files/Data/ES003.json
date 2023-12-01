@@ -1,0 +1,78 @@
+{
+  "dialogueEventSetID" : "ES003",
+  "character" : "ClassmateB",
+  "mainEvent" : true,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "ClassmateB",
+          "content" : "Hey, Vincent, a few of us are planning to play basketball this weekend. Do you want to join us?"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Oh, this weekend? I'll have to check. I've been quite busy with studying lately."
+        },
+        {
+          "name" : "ClassmateB",
+          "content" : "Come on, it'll be a good break. It's important to relax a bit, too, right?"
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "Yes",
+          "nextDialogueEventID" : "D002",
+          "effect" : [-1,0,0]
+        },
+        {
+          "optionContent" : "No",
+          "nextDialogueEventID" : "D003",
+          "effect" : [0,0,0]
+        }
+      ]
+    },
+    {
+      "dialogueEventID" : "D002",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "Yeah, you're right. Alright, I'll join in. Playing basketball does sound like a nice way to unwind."
+        },
+        {
+          "name" : "ClassmateB",
+          "content" : "Great! We won't play for too long, just enough to have some fun and get a bit of exercise."
+        },
+        {
+          "name" : "Vincent",
+          "content" : "That sounds good. See you on the weekend then. I'm looking forward to playing together."
+        }
+      ],
+
+      "options" : []
+    },
+    {
+      "dialogueEventID" : "D003",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "I understand, and normally I would love to join. But with the exams coming up, I really need to focus. Maybe another time?"
+        },
+        {
+          "name" : "ClassmateB",
+          "content" : "Alright, I get it. Exams are important. Well, if you change your mind, let us know!"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Thanks for understanding. I'll definitely join you guys next time. Good luck, and have fun!"
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

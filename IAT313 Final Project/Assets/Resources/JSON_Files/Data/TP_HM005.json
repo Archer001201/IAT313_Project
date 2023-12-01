@@ -1,0 +1,28 @@
+{
+  "dialogueEventSetID" : "TP_HM005",
+  "character" : "",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "With less than a month left until the college entrance exam, I need to work even harder to get into my dream university."
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "Classroom",
+          "nextDialogueEventID" : ""
+        },
+        {
+          "optionContent" : "Cancel",
+          "nextDialogueEventID" : ""
+        }
+      ]
+    }
+  ]
+}

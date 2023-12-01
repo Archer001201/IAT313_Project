@@ -1,7 +1,7 @@
 {
   "dialogueEventSetID" : "E005",
   "character" : "ClassmateA",
-  "mainEvent" : false,
+  "mainEvent" : true,
   "dialogueEvents" : [
     {
       "dialogueEventID" : "D001",
@@ -10,8 +10,46 @@
         {
           "name" : "ClassmateA",
           "content" : "Hi, Vincent, do you want to play basketball together? Let's relax a bit."
-        },
+        }
+      ],
 
+      "options" : [
+        {
+          "optionContent" : "Yes",
+          "nextDialogueEventID" : "D002",
+          "effect" : [-1,0,0]
+        },
+        {
+          "optionContent" : "No",
+          "nextDialogueEventID" : "D003",
+          "effect" : [0,1,0]
+        }
+      ]
+    },
+    {
+      "dialogueEventID" : "D002",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "I've really been studying the whole day today. I should get some physical activity. "
+        },
+        {
+          "name" : "ClassmateA",
+          "content" : "Come on join us. By the way, The new student who joined our class today is so pretty!"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Are you talking about Yvonne? (She does seem quite beautiful.)"
+        }
+      ],
+
+      "options" : []
+    },
+    {
+      "dialogueEventID" : "D003",
+
+      "dialogues" : [
         {
           "name" : "Vincent",
           "content" : "No, thanks. I need to get back home quickly to continue my review."

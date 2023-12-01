@@ -31,7 +31,7 @@
         {
           "optionContent" : "Welcome...",
           "nextDialogueEventID" : "D002",
-          "effect" : [0,2,1]
+          "effect" : [0,1,1]
         }
       ]
     },

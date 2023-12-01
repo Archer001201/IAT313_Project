@@ -18,7 +18,7 @@ MonoBehaviour:
     scenes:
     - sceneName: Home
       events:
-      - fileName: E027
+      - fileName: E001
         position: {x: 1.14, y: 2.34, z: 0}
         isFinished: 0
       npcs:
@@ -72,7 +72,7 @@ MonoBehaviour:
       - TP_HW101
       - TP_HW202
       - TP_HW301
-    summaryFile: summaryTest
+    summaryFile: S001
     audioFile: Casual theme loop 3
   - levelID: L002
     scenes:
@@ -85,7 +85,7 @@ MonoBehaviour:
       - npcName: Mom
         position: {x: 2.62, y: -0.38}
       teleportFiles:
-      - TP_HM001
+      - TP_HM004
     - sceneName: Classroom
       events:
       - fileName: E011
@@ -103,7 +103,10 @@ MonoBehaviour:
       teleportFiles:
       - TP_OFC001
     - sceneName: Playground
-      events: []
+      events:
+      - fileName: ES005
+        position: {x: 2.96, y: 1.42, z: 0}
+        isFinished: 0
       npcs: []
       teleportFiles:
       - TP_PLGD001
@@ -127,5 +130,293 @@ MonoBehaviour:
       - TP_HW101
       - TP_HW201
       - TP_HW301
-    summaryFile: summaryTest
-    audioFile: 
+    summaryFile: S002
+    audioFile: Casual theme loop 3
+  - levelID: L003
+    scenes:
+    - sceneName: Home
+      events: []
+      npcs:
+      - npcName: Mom
+        position: {x: 2.62, y: -0.38}
+      teleportFiles:
+      - TP_HM003
+    - sceneName: Classroom
+      events:
+      - fileName: E014
+        position: {x: 4.34, y: 0.59, z: 0}
+        isFinished: 0
+      - fileName: E015
+        position: {x: 7.22, y: -4.29, z: 0}
+        isFinished: 0
+      npcs: []
+      teleportFiles:
+      - TP_CLSR003
+    - sceneName: Office
+      events: []
+      npcs: []
+      teleportFiles:
+      - TP_OFC001
+    - sceneName: Playground
+      events:
+      - fileName: ES001
+        position: {x: 4.13, y: 2.07, z: 0}
+        isFinished: 0
+      - fileName: E017
+        position: {x: 1.03, y: -2.61, z: 0}
+        isFinished: 0
+      npcs: []
+      teleportFiles:
+      - TP_PLGD001
+    - sceneName: Library
+      events:
+      - fileName: E012
+        position: {x: 0, y: 0, z: 0}
+        isFinished: 0
+      npcs: []
+      teleportFiles:
+      - TP_LBRY001
+    - sceneName: Hallway
+      events:
+      - fileName: E013
+        position: {x: -3.73, y: 1.55, z: 0}
+        isFinished: 0
+      npcs:
+      - npcName: ClassmateB
+        position: {x: -4.49, y: -2.23}
+      teleportFiles:
+      - TP_HW101
+      - TP_HW201
+      - TP_HW301
+    summaryFile: S003
+    audioFile: Casual theme loop 3
+  - levelID: L004
+    scenes:
+    - sceneName: Home
+      events:
+      - fileName: E018
+        position: {x: -4.23, y: 2.83, z: 0}
+        isFinished: 0
+      - fileName: E019
+        position: {x: -4.46, y: -0.51, z: 0}
+        isFinished: 0
+      npcs: []
+      teleportFiles:
+      - TP_HM001
+    - sceneName: Classroom
+      events:
+      - fileName: E021
+        position: {x: 4.53, y: -4.02, z: 0}
+        isFinished: 0
+      npcs: []
+      teleportFiles:
+      - TP_CLSR001
+    - sceneName: Office
+      events:
+      - fileName: E008
+        position: {x: 0, y: 0, z: 0}
+        isFinished: 0
+      npcs: []
+      teleportFiles:
+      - TP_OFC001
+    - sceneName: Playground
+      events:
+      - fileName: ES002
+        position: {x: 6.78, y: 3.07, z: 0}
+        isFinished: 0
+      npcs: []
+      teleportFiles:
+      - TP_PLGD001
+    - sceneName: Library
+      events:
+      - fileName: E023
+        position: {x: 3.21, y: 2.06, z: 0}
+        isFinished: 0
+      npcs: []
+      teleportFiles:
+      - TP_LBRY001
+    - sceneName: Hallway
+      events:
+      - fileName: E020
+        position: {x: 4.23, y: -2.2, z: 0}
+        isFinished: 0
+      npcs:
+      - npcName: ClassmateB
+        position: {x: -4.49, y: -2.23}
+      teleportFiles:
+      - TP_HW101
+      - TP_HW201
+      - TP_HW301
+    summaryFile: S004
+    audioFile: Casual theme loop 3
+  - levelID: L005
+    scenes:
+    - sceneName: Home
+      events:
+      - fileName: E024
+        position: {x: 3.19, y: -0.38, z: 0}
+        isFinished: 0
+      npcs:
+      - npcName: Mom
+        position: {x: 2.62, y: -0.38}
+      teleportFiles:
+      - TP_HM005
+    - sceneName: Classroom
+      events:
+      - fileName: E026
+        position: {x: 4.53, y: -4.02, z: 0}
+        isFinished: 0
+      npcs: []
+      teleportFiles:
+      - TP_CLSR001
+    - sceneName: Office
+      events: []
+      npcs: []
+      teleportFiles:
+      - TP_OFC001
+    - sceneName: Playground
+      events:
+      - fileName: ES005
+        position: {x: 2.96, y: 1.42, z: 0}
+        isFinished: 0
+      npcs: []
+      teleportFiles:
+      - TP_PLGD001
+    - sceneName: Library
+      events:
+      - fileName: E027
+        position: {x: 3.21, y: 2.06, z: 0}
+        isFinished: 0
+      - fileName: ES004
+        position: {x: 7.07, y: 1.22, z: 0}
+        isFinished: 0
+      npcs: []
+      teleportFiles:
+      - TP_LBRY001
+    - sceneName: Hallway
+      events:
+      - fileName: E025
+        position: {x: 2.68, y: 1.55, z: 0}
+        isFinished: 0
+      npcs:
+      - npcName: ClassmateB
+        position: {x: -4.49, y: -2.23}
+      teleportFiles:
+      - TP_HW101
+      - TP_HW201
+      - TP_HW301
+    summaryFile: S005
+    audioFile: Casual theme loop 3
+  - levelID: L006
+    scenes:
+    - sceneName: Home
+      events:
+      - fileName: E028
+        position: {x: 3.19, y: -0.38, z: 0}
+        isFinished: 0
+      npcs:
+      - npcName: Mom
+        position: {x: 2.62, y: -0.38}
+      teleportFiles:
+      - TP_HM001
+    - sceneName: Classroom
+      events:
+      - fileName: E030
+        position: {x: 4.53, y: -4.02, z: 0}
+        isFinished: 0
+      npcs: []
+      teleportFiles:
+      - TP_CLSR001
+    - sceneName: Office
+      events:
+      - fileName: E029
+        position: {x: 0, y: 0, z: 0}
+        isFinished: 0
+      npcs: []
+      teleportFiles:
+      - TP_OFC001
+    - sceneName: Playground
+      events:
+      - fileName: ES003
+        position: {x: 0, y: 0, z: 0}
+        isFinished: 0
+      npcs: []
+      teleportFiles:
+      - TP_PLGD001
+    - sceneName: Library
+      events:
+      - fileName: E031
+        position: {x: 3.21, y: 2.06, z: 0}
+        isFinished: 0
+      - fileName: ES004
+        position: {x: 7.07, y: 1.22, z: 0}
+        isFinished: 0
+      npcs: []
+      teleportFiles:
+      - TP_LBRY001
+    - sceneName: Hallway
+      events:
+      - fileName: E009
+        position: {x: 2.68, y: 1.55, z: 0}
+        isFinished: 0
+      npcs:
+      - npcName: ClassmateB
+        position: {x: -4.49, y: -2.23}
+      teleportFiles:
+      - TP_HW101
+      - TP_HW201
+      - TP_HW301
+    summaryFile: S006
+    audioFile: Casual theme loop 3
+  - levelID: L007
+    scenes:
+    - sceneName: Home
+      events:
+      - fileName: E033
+        position: {x: 3.19, y: -0.38, z: 0}
+        isFinished: 0
+      npcs:
+      - npcName: Mom
+        position: {x: 2.62, y: -0.38}
+      teleportFiles:
+      - TP_HM006
+    - sceneName: Classroom
+      events:
+      - fileName: E034
+        position: {x: 4.53, y: -4.02, z: 0}
+        isFinished: 0
+      npcs: []
+      teleportFiles:
+      - TP_CLSR001
+    - sceneName: Office
+      events: []
+      npcs: []
+      teleportFiles:
+      - TP_OFC001
+    - sceneName: Playground
+      events:
+      - fileName: E036
+        position: {x: 0, y: 0, z: 0}
+        isFinished: 0
+      npcs: []
+      teleportFiles:
+      - TP_PLGD001
+    - sceneName: Library
+      events:
+      - fileName: ES004
+        position: {x: 3.21, y: 2.06, z: 0}
+        isFinished: 0
+      npcs: []
+      teleportFiles:
+      - TP_LBRY001
+    - sceneName: Hallway
+      events: []
+      npcs:
+      - npcName: ClassmateB
+        position: {x: -4.49, y: -2.23}
+      teleportFiles:
+      - TP_HW101
+      - TP_HW201
+      - TP_HW301
+    summaryFile: S007
+    audioFile: Casual theme loop 3

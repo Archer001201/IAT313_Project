@@ -1,7 +1,7 @@
 {
   "dialogueEventSetID" : "E001",
   "character" : "ClassmateC",
-  "mainEvent" : false,
+  "mainEvent" : true,
   "dialogueEvents" : [
     {
       "dialogueEventID" : "D001",
@@ -10,10 +10,42 @@
         {
           "name" : "ClassmateC",
           "content" : "Isn't that Vincent? You've already built a good relationship with the new female student so quickly?"
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "Admit",
+          "nextDialogueEventID" : "D002",
+          "effect" : [0,1,0]
         },
+
+        {
+          "optionContent" : "Deny",
+          "nextDialogueEventID" : "D003",
+          "effect" : [0,-1,1]
+        }
+      ]
+    },
+    {
+      "dialogueEventID" : "D002",
+
+      "dialogues" : [
         {
           "name" : "Vincent",
-          "content" : "The new student needs our attention! She's having trouble with a few math problems, and I'm going to help her."
+          "content" : "The new student needs to become familiar with the school environment, and I hope that students can help each other."
+        }
+      ],
+
+      "options" : []
+    },
+    {
+      "dialogueEventID" : "D003",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "Not that familiar, just a classmate who was arranged by the teacher to sit next to me."
         }
       ],
 

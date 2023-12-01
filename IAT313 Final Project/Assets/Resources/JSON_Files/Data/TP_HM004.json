@@ -1,0 +1,28 @@
+{
+  "dialogueEventSetID" : "TP_HM002",
+  "character" : "",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "Vincent",
+          "content" : "This week there is a mock exam, and I need to prepare well for it."
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "Classroom",
+          "nextDialogueEventID" : ""
+        },
+        {
+          "optionContent" : "Cancel",
+          "nextDialogueEventID" : ""
+        }
+      ]
+    }
+  ]
+}

@@ -10,7 +10,21 @@
         {
           "name" : "Teacher",
           "content" : "Hi Vincent! The results are out, how do you feel?"
-        },
+        }
+      ],
+
+      "options" : [
+        {
+          "optionContent" : "Upset",
+          "nextDialogueEventID" : "D002",
+          "effect" : [2,0,0]
+        }
+      ]
+    },
+    {
+      "dialogueEventID" : "D002",
+
+      "dialogues" : [
         {
           "name" : "Vincent",
           "content" : "I feel like I've hit a bottleneck in my studies….."
