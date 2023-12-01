@@ -1,0 +1,47 @@
+{
+  "dialogueEventSetID" : "E030",
+  "character" : "ClassmateA",
+  "mainEvent" : false,
+  "dialogueEvents" : [
+    {
+      "dialogueEventID" : "D001",
+
+      "dialogues" : [
+        {
+          "name" : "ClassmateA",
+          "content" : "Hey, Vincent, I've heard that you and Yvonne have gotten pretty close lately? Are you two together or something?"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "Ah, well... We're just study partners. We've been preparing for the college entrance exams together."
+        },
+        {
+          "name" : "ClassmateA",
+          "content" : "Just study partners? But I see you guys together all the time, even after school. Are you sure it's not something more?"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "It's really just studying. I know there’s a lot of talk, but none of that is true."
+        },
+        {
+          "name" : "ClassmateA",
+          "content" : "Oh, come on, Vincent, everyone's saying you two would make a great couple. You do seem really close."
+        },
+        {
+          "name" : "Vincent",
+          "content" : "We're just good friends, honestly. Yvonne has helped me improve a lot in my studies. Our relationship isn't like what everyone thinks."
+        },
+        {
+          "name" : "ClassmateA",
+          "content" : "Alright, if you say so. But if you two do end up together, you better tell me first!"
+        },
+        {
+          "name" : "Vincent",
+          "content" : "I will. But for now, we're really just focused on studying."
+        }
+      ],
+
+      "options" : []
+    }
+  ]
+}

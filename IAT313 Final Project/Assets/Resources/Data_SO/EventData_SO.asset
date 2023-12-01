@@ -73,7 +73,7 @@ MonoBehaviour:
       - TP_HW202
       - TP_HW301
     summaryFile: S001
-    audioFile: Casual theme loop 3
+    audioFile: day1
   - levelID: L002
     scenes:
     - sceneName: Home
@@ -131,7 +131,7 @@ MonoBehaviour:
       - TP_HW201
       - TP_HW301
     summaryFile: S002
-    audioFile: Casual theme loop 3
+    audioFile: day2
   - levelID: L003
     scenes:
     - sceneName: Home
@@ -189,7 +189,7 @@ MonoBehaviour:
       - TP_HW201
       - TP_HW301
     summaryFile: S003
-    audioFile: Casual theme loop 3
+    audioFile: day3
   - levelID: L004
     scenes:
     - sceneName: Home
@@ -248,7 +248,7 @@ MonoBehaviour:
       - TP_HW201
       - TP_HW301
     summaryFile: S004
-    audioFile: Casual theme loop 3
+    audioFile: day4
   - levelID: L005
     scenes:
     - sceneName: Home
@@ -306,7 +306,7 @@ MonoBehaviour:
       - TP_HW201
       - TP_HW301
     summaryFile: S005
-    audioFile: Casual theme loop 3
+    audioFile: day5
   - levelID: L006
     scenes:
     - sceneName: Home
@@ -367,7 +367,7 @@ MonoBehaviour:
       - TP_HW201
       - TP_HW301
     summaryFile: S006
-    audioFile: Casual theme loop 3
+    audioFile: day6
   - levelID: L007
     scenes:
     - sceneName: Home
@@ -419,4 +419,4 @@ MonoBehaviour:
       - TP_HW201
       - TP_HW301
     summaryFile: S007
-    audioFile: Casual theme loop 3
+    audioFile: day7
